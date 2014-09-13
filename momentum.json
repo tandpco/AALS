@@ -1,0 +1,13 @@
+{
+  "aws": {
+    "key": "AKIAI2DCNJALHSQ4FHGQ",
+    "secret":"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",
+    "bucket":"rainmakerapp",
+    "client":"aals"
+  },
+  "momentum": {
+    "key": "daniel.tomosovich",
+    "secret":"e1O673VwDcEcVOBKVwkSQqtuSygLqZInBcGt5NenXGbiI4ExACOCkKIA",
+    "client":"aals"
+  }
+}
