@@ -10,17 +10,7 @@ pattern:
     name: Summary
     description: This text appears below the header. Try to keep it restricted to a couple lines.
   -
-    key: action
-    format: button
-    name: Action Button
-    description: Provide button text and a link.
-  -
     key: image
     format: upload
     name: "Upload a slide image."
     description: "This covers the background of the slide. Make sure it's at least 1200px wide. Ideally, crop the image to 3:1 ratio prior to uploading. Otherwise the image will be centered vertically, possibly clipping off important content."
-  -
-    key: video
-    format: html5-video
-    name: Slide Video
-    description: "This video will become the background of the slide. It's generally a good idea to follow the same formatting guidelines as the for slide image for best results."
