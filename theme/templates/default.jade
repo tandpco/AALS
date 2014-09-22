@@ -23,6 +23,33 @@ html(lang="en")
       height: 460px;
       width: 100%;
       }
+      #startFundraiser .modal-header, 
+      #projectUpdates .modal-header, 
+      #moneyUsage .modal-header, 
+      #familyModal .modal-header {
+        border-bottom: 0;
+        margin-bottom: -20px;
+      }
+      #startFundraiser ul, 
+      #projectUpdates ul, 
+      #moneyUsage ul, 
+      #familyModal ul {
+        padding: 0;
+        margin: 0;
+      }
+      #startFundraiser > .modal-dialog.modal-sm, 
+      #projectUpdates > .modal-dialog.modal-sm, 
+      #moneyUsage > .modal-dialog.modal-sm, 
+      #familyModal > .modal-dialog.modal-sm {
+        width: 500px;
+      }
+      #startFundraiser > .modal-dialog.modal-sm > .modal-content, 
+      #projectUpdates > .modal-dialog.modal-sm > .modal-content, 
+      #moneyUsage > .modal-dialog.modal-sm > .modal-content,
+      #familyModal > .modal-dialog.modal-sm > .modal-content {
+        padding: 30px;
+        border-radius: 3px;
+      }
     // Slider CSS
     script(src="assets://js/layerslider.transitions.js", type="text/javascript")
     script(src="https://code.jquery.com/jquery-1.11.1.min.js")

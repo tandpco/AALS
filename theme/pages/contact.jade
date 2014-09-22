@@ -22,34 +22,33 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             p {:settings.organization-address}
 
     // Connect with us
-    .section.container.connect.center
+    .section.container.connect.center.contact-social
       h3.push-down
         | CONNECT WITH US
-      ul.social-media.contact-up
+      ul.social-media(style="padding: 0; text-align: center;")
         li
-          a.social-contact(href="#", style="font-size: 1.5em;")
+          a(href="#")
             i.fa.fa-facebook
         li
-          a.social-contact(href="#", style="font-size: 1.5em;")
+          a(href="#")
             i.fa.fa-twitter
         li
-          a.social-contact(href="#", style="font-size: 1.5em;")
+          a(href="#")
             i.fa.fa-instagram
         li
-          a.social-contact(href="#", style="font-size: 1.5em;")
+          a(href="#")
             i.fa.fa-youtube-play
     // 
-    .col-md-12.contact-white
-      .container(style="max-width: 40%")
+    .container.contact-white
+      .col-md-10.col-md-offset-1
         .caption.center
           h2 Are you an interested family?
           p
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum lacus, euismod eget nibh nec, imperdiet dictum dui. Aliquam et egestas urna. Vestibulum sit amet arcu ut velit luctus dignissim. Mauris auctor odio et neque hendrerit vehicula. Etiam facilisis tortor et leo luctus fringilla.
     // Form
-    .form.col-md-12.push-down
-      .container.center
-        .col-md-3
-        .col-md-6
+    .container.center.push-down
+      .form.col-md-8.col-md-offset-2
+        .container-fluid
           form(role="form", style="padding: 2.0em;")
             .form-group
               input#input-name.form-control.contact-form(type="text", placeholder="Your Name:")
@@ -57,8 +56,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
               input#input-email.form-control.contact-form(type="email", placeholder="Your Email:")
             .form-group
               textarea.form-control.contact-form(rows="9", placeholder="Tell us a little about your story:")
-            button.btn.btn-transparent(type="submit", style=" padding-left: 2.2em; padding-right: 2.2em;")  Submit
-        .col-md-3
+            button.btn.btn-dark-grey.btn-lg(type="submit")  Submit
     // Footer
     // Separates Content and Footer
     .container.center.connect

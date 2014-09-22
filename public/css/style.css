@@ -7646,6 +7646,16 @@ ul li {
 .btn-white:hover {
   color: #35d6f0 !important;
 }
+.btn-fb {
+  background-color: rgba(53, 214, 240, 0.75);
+  font-style: normal;
+  color: #ffffff;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border: none;
+  background-color: #4f89c5;
+}
 .btn-clear-2 {
   text-transform: lowercase;
   text-decoration: underline;
@@ -7792,6 +7802,16 @@ ul li {
 }
 .connect h2 {
   margin-bottom: 1.5em;
+}
+.contact-social .social-media {
+  margin-top: 1.5em;
+  margin-left: 0;
+}
+.contact-social .social-media li {
+  margin-right: 1em;
+}
+.contact-social .social-media li a {
+  font-size: 2em;
 }
 .social-media li {
   height: 100%;
@@ -8032,23 +8052,45 @@ footer {
 .engage-white {
   background-color: #ffffff;
 }
+.engage-white .caption {
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+.engage-white .caption p {
+  font-size: 18px;
+}
 .engage-white p {
   color: #9f9f9f;
 }
 .engage-story {
   background-color: #f0f0f0;
   margin-top: 2em;
+  padding-bottom: 4em;
 }
 .engage-story h2 {
   margin-top: 2em;
+}
+.engage-story p {
+  font-size: 18px;
 }
 .engage-story .round-image {
   border-color: #35d6f0;
   margin-top: 2em;
   margin-bottom: 2em;
 }
+.engage-story .paragraph-padding {
+  padding-left: 3.2em;
+  padding-right: 3.2em;
+}
 .share-story {
   background-color: #ffffff;
+  margin-top: 4em;
+}
+.share-story .caption .btn {
+  margin-right: 1em;
+}
+.share-story .caption .btn:last-child {
+  margin-right: 0;
 }
 .story-item {
   padding-top: 2em;
@@ -8096,22 +8138,59 @@ footer {
   display: block;
   color: #35d6f0;
   margin-bottom: 2em;
+  font-size: 20px;
 }
 .contact-white p {
   color: #9f9f9f;
   margin-bottom: 0;
+  font-size: 20px;
+}
+.contact-white .caption h3 {
+  margin-top: 3em;
+}
+.form {
+  margin-top: 3em;
+}
+.form .form-group {
+  margin-bottom: 2em;
+}
+.form .form-group .form-control {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 1.5em;
+  font-size: 20px;
+  font-family: "museo", serif;
+}
+.form .btn {
+  background-color: #4b4b4b;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+.form .btn:hover {
+  color: #35d6f0;
 }
 .about-top {
   height: 435px;
   background-image: url(../images/banner.png);
   background-position: center;
+  margin-bottom: 5em;
 }
 .about-top h3 {
   font-family: "museo", serif;
   font-weight: normal;
+  text-transform: none;
 }
 .contact p {
   color: #9f9f9f;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.contact p:last-child {
+  margin-top: 1em;
+}
+.contact p a {
+  color: #35d6f0;
 }
 .contact h4 {
   font-family: "museo", serif;
@@ -8128,6 +8207,17 @@ footer {
 .about-cta {
   color: #000;
   font-style: italic;
+  font-size: 22px;
+}
+.inline-social {
+  padding-left: 0;
+  margin-top: 1.5em;
+}
+.inline-social li {
+  margin-right: 0.7em;
+}
+.inline-social li a {
+  font-size: 1.5em;
 }
 .btn {
   text-transform: uppercase;
