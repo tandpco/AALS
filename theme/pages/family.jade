@@ -66,7 +66,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           | {project.summary}
         .col-md-3.col-md-offset-1.center
           h5 Meet the family:
-          img.round-image(src="{project.photos.first.version(300,300).photo-url}", alt="Family")
+          img.round-image(src="{project.photos.first.version(300,300)}", alt="Family")
           h5 Give to the story:
           a.btn.btn-lg.btn-blue(role="button" href="#/my/donate/details") Give now
           h5 Share the story:
