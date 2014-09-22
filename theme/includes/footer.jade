@@ -1,4 +1,26 @@
-//- This is the footer block
-.footer
-  hr
-  p this is the footer
+
+footer
+  .container.center
+    .row
+      .col-xs-12.col-sm-4.col-md-4.address
+        h4 ADOPT A LOVE STORY
+        address
+          p {:settings.organization-address}
+          p {:settings.organization-phone}
+          a(href="mailto:info@adoptalovestory.com", target="_top") info@adoptalovestory.com
+        p.copyright &#169; 2014 Adopt a Love Story
+      .col-xs-12.col-sm-4.col-md-4.footer-nav
+        ul
+          li: a(href="/about") About
+          li: a(href="/family") Families
+          li: a(href="/engage") Engage
+          li: a(href="/contact") Contact
+          li: a(href="/story") My story
+      .col-xs-12.col-sm-4.col-md-4.footer-social
+        h4 Connect: 
+        br
+        ul
+          li: a(href="#"): i.fa.fa-facebook
+          li: a(href="#"): i.fa.fa-twitter
+          li: a(href="#"): i.fa.fa-instagram
+          li: a(href="#"): i.fa.fa-youtube-play

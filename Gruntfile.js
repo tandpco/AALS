@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['coffee','jshint','uglify','stylus','s3']);
+  grunt.registerTask('default', ['rainmaker','coffee','jshint','uglify','stylus','s3']);
   grunt.registerTask('deploy', ['s3']);
 
 };
