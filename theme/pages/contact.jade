@@ -1,0 +1,64 @@
+theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
+
+  // make sure the campaign can be loaded
+  require(:eval="project.id")
+  not-found Sorry, the project you're looking for could not be found. 
+
+  content
+    // Top
+    .col-md-12.contact-top
+      .container
+        .caption.center
+          h2(style="color: #fff;") Contact
+          h4
+            em Here&#8217;s where you say &#8220;what up&#8221;
+    // Top white
+    .col-md-12.contact-white.spread-section
+      .container
+        .caption.center
+          h3 Get in touch:
+          a(href="mailto:info@aals.com", target="_top") info@aals.com
+          address
+            p {:settings.organization-address}
+
+    // Connect with us
+    .section.container.connect.center
+      h3.push-down
+        | CONNECT WITH US
+      ul.social-media.contact-up
+        li
+          a.social-contact(href="#", style="font-size: 1.5em;")
+            i.fa.fa-facebook
+        li
+          a.social-contact(href="#", style="font-size: 1.5em;")
+            i.fa.fa-twitter
+        li
+          a.social-contact(href="#", style="font-size: 1.5em;")
+            i.fa.fa-instagram
+        li
+          a.social-contact(href="#", style="font-size: 1.5em;")
+            i.fa.fa-youtube-play
+    // 
+    .col-md-12.contact-white
+      .container(style="max-width: 40%")
+        .caption.center
+          h2 Are you an interested family?
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum lacus, euismod eget nibh nec, imperdiet dictum dui. Aliquam et egestas urna. Vestibulum sit amet arcu ut velit luctus dignissim. Mauris auctor odio et neque hendrerit vehicula. Etiam facilisis tortor et leo luctus fringilla.
+    // Form
+    .form.col-md-12.push-down
+      .container.center
+        .col-md-3
+        .col-md-6
+          form(role="form", style="padding: 2.0em;")
+            .form-group
+              input#input-name.form-control.contact-form(type="text", placeholder="Your Name:")
+            .form-group
+              input#input-email.form-control.contact-form(type="email", placeholder="Your Email:")
+            .form-group
+              textarea.form-control.contact-form(rows="9", placeholder="Tell us a little about your story:")
+            button.btn.btn-transparent(type="submit", style=" padding-left: 2.2em; padding-right: 2.2em;")  Submit
+        .col-md-3
+    // Footer
+    // Separates Content and Footer
+    .container.center.connect
