@@ -7633,6 +7633,19 @@ ul li {
   letter-spacing: 2px;
   border: none;
 }
+.btn-white {
+  background-color: #ffffff;
+  font-style: normal;
+  color: #000!important;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border: none;
+}
+.btn-white:hover {
+  color: #35d6f0 !important;
+}
 .btn-clear-2 {
   text-transform: lowercase;
   text-decoration: underline;
@@ -7741,10 +7754,6 @@ ul li {
 }
 .jumbotron .btn-margin {
   margin-top: 35px;
-}
-article[class*="col-"] {
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
 }
 .the-story .row {
   overflow: hidden;
@@ -7926,6 +7935,52 @@ footer {
   font-size: 18px;
   color: #9f9f9f;
 }
+.family-caption p {
+  color: #9f9f9f;
+  font-size: 20px;
+}
+.family-caption h3 {
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 5em;
+}
+.family-caption h2 {
+  margin-top: 2em;
+}
+.family-caption article {
+  margin-bottom: 3em;
+}
+.img-wrapper {
+  position: static;
+  height: 460px;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.img-wrapper .img-bg {
+  min-height: 460px;
+  display: block;
+  position: absolute;
+  max-height: 460px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.img-wrapper h3 {
+  padding-top: 30%;
+}
+.static {
+  position: static;
+}
+.img-1 {
+  margin-top: 3em;
+  background-image: url(../images/story-break.png);
+}
+.img-2 {
+  background-image: url(../images/story-break2.png);
+}
 .video {
   height: 650px;
   display: block;
@@ -7941,16 +7996,6 @@ footer {
   border-radius: 50%;
   border: 8px solid #f4f4f4;
 }
-.story-2 {
-  height: 460px;
-  background-image: url(../images/story-break.png);
-  background-position: center;
-}
-.story-4 {
-  height: 460px;
-  background-image: url(../images/story-break2.png);
-  background-position: center;
-}
 .rl-border {
   border-right: 4px solid #e1e1e1;
   border-left: 4px solid #e1e1e1;
@@ -7963,27 +8008,6 @@ footer {
 }
 .summary .btn-clear {
   text-transform: none;
-}
-.story-1 {
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-.story-1 p,
-.story-2 p,
-.story-3 p,
-.story-4 p,
-.story-5 p {
-  color: #9f9f9f;
-  font-size: 18px;
-}
-.story-1 h3,
-.story-2 h3,
-.story-3 h3,
-.story-4 h3,
-.story-5 h3 {
-  color: #ffffff;
-  font-style: italic;
-  margin-top: 5em;
 }
 .engage-top {
   height: 435px;
@@ -8013,6 +8037,15 @@ footer {
 }
 .engage-story {
   background-color: #f0f0f0;
+  margin-top: 2em;
+}
+.engage-story h2 {
+  margin-top: 2em;
+}
+.engage-story .round-image {
+  border-color: #35d6f0;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .share-story {
   background-color: #ffffff;
