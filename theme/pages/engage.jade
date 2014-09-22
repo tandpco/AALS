@@ -1,0 +1,77 @@
+theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
+  // make sure the campaign can be loaded
+  require(:eval="project.id")
+  not-found Sorry, the project you're looking for could not be found. 
+
+  content
+    // Navbar
+    nav.navbar.navbar-transparent(role="navigation")
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="index.html")
+            img(src="images/logo.png", alt="Adopt a Love Story")
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="about") About
+            li
+              a(href="family") Our Families
+            li.active
+              a(href="engage") Engage
+            li
+              a(href="contact") Contact
+            li
+              a.login(href="#/my/login") LOGIN
+        // /.navbar-collapse
+      // /.container-fixed
+    // Top
+    .col-md-12.engage-top
+      .container
+        .caption.center
+          h2.banner-caption Enagage
+          h3.banner-caption Ready to get involved?
+    // Top white
+    .col-md-12.engage-white.spread-section
+      .container
+        .caption.center.engage-gap
+          h3 Join the story
+          p.push-down Join the story and be a part of a family&#8217;s adoptive journey.
+          a.btn.btn-primary.btn-lg(role="button") Give to a story
+    // Engage the story
+    .col-md-12.engage-story.spread-section.engage-gap
+      .container.center
+        .caption.engage-gap
+          h2 Engage the story
+          p
+            | So you&#8217;ve joined the story but want to do more- we believe one of the powerful ways you can move from being part of the story to actually helping write a families adoptive love story is to help them raise the funds they need-
+        .col-md-6
+          img.round-image(src="images/elliipse1.png", alt="")
+          p
+            | If you"re excited to get started and simply want to donate an upcoming event in your life(think birthday or graduation), then jump in here:
+          p
+            a.btn.btn-lg.btn-transparent(href="#", role="button") Give an event
+        .col-md-6
+          img.round-image(src="images/Ellipse2.png", alt="")
+          p
+            | If you&#8217;re one of those Type A, overachievers who won&#8217;t rest until you&#8217;ve reached a goal, then you should check out this:
+          p
+            a.btn.btn-lg.btn-transparent(href="#", role="button") Start a fundraiser
+    // Share
+    .col-md-12.share-story.spread-section
+      .container
+        .caption.center
+          h3 Share the Story
+          p share Adopt a Love Story with your Friends and Networks.
+          a.btn.btn-primary.btn-lg(role="button")
+            i.fa.fa-twitter.white
+            | Tweet
+          a.btn.btn-primary.btn-lg(role="button")
+            i.fa.fa-facebook-square.white
+            | Share
