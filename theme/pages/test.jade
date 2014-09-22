@@ -5,80 +5,82 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
   not-found Sorry, the project you're looking for could not be found. 
 
   content
-    .section.donate-top.section-height(style="background-image: url('{project.banners.first.photo-url}');")
+    .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
       .container
         .donate-section.center
           .donate-caption
             h1 {project.name}
             p(style="font-style: italic; padding: 0.3em;") {project.prop.subtitle}
           .progress
-            .progress-bar(role="progressbar", aria-valuenow="{project.progress.fraction|multiply(100)}", aria-valuemin="0", aria-valuemax="100")
+            .progress-bar(role="progressbar", aria-valuenow="{project.progress.fraction|multiply(100)}", aria-valuemin="0", aria-valuemax="100", style="width: 60%;")
               span {project.progress.money|money(2)}
             span Goal {project.target|money(2)}
           p
-            a.btn.btn-lg.btn-transparent(href="#/my/donate/details", role="button") Give to this Story
-          p Share this story:
-          ul.social-media
-            li(style="font-size: 0.75em;"): a(href="#"): i.fa.fa-facebook-square.white
-            li(style="font-size: 0.75em;"): a(href="#"): i.fa.fa-twitter.white
+            a.btn.btn-lg.btn-blue-translucent(href="#/my/donate/details", role="button") Give to this Story
+          p.p-text Share this story:
+          ul.square-social
+            li
+              a(href="#")
+                i.fa.fa-facebook-square.white
+            li
+              a(href="#")
+                i.fa.fa-twitter.white
     // Countdown section
-    .section.container.countdown
+    .section.container.countdown.margin-bottom
       .row.center
         .row(style="padding: 0.5em;")
         .col-md-4
-          h3
-            | {project.timestamp.until.countdown.day} days {project.timestamp.until.countdown.minute} minutes left
+          h3 {project.timestamp.until.countdown.day} days {project.timestamp.until.countdown.minute} minutes left
         .col-md-4.rl-border
           h3
             i.fa.fa-info-circle
             | What"s the money for?
-        .col-md-4(style="")
-          a.btn.btn-primary.btn-transparent(style="margin-top: 1.5em;", role="button")
+        .col-md-4
+          a.btn.btn-lg.btn-dark-grey.btn-margin(role="button")
             i.fa.fa-plus
             | Start a fundraiser
-      .row(style="padding: 0.5em;")
     // Video section
     .section.video.section-height
-      //- 
-        | <div class="embed-responsive embed-responsive-16by9 section-height">
-        |   <iframe class="embed-responsive-item" src=""></iframe>
-        | </div> 
+      //- <div class="embed-responsive embed-responsive-16by9 section-height"><iframe class="embed-responsive-item" src=""></iframe></div> 
     // Summary
     .section.container.border.summary
       .row
         .col-md-6
-          .col-md-6
+          .col-md-6.margin-top
             h3
               | Updates
               span.badge {project.posts.length}
-          .col-md-6
+          .col-md-6.margin-top
             h3
               | Givers
               span.badge {project.members.length}
         .col-md-6
           h3
             | Adoption Agency:
-            a.btn.btn-primary.btn-clear(role="button")  SoCal Adoption
+            a.btn.btn-clear-2(role="button")  SoCal Adoption
     // Story
     .story-1.section.container
       .row
         .col-md-8
           h2 Our story in our words
           | {project.summary}
-        .col-md-1
-        .col-md-3.center
-          h4 Meet the family:
-          img.round-image.img-responsive(src="{project.photo-url}/x:300/y:300", alt="Family")
-          h5(style="padding-bottom: 0.75em; font-style: italic;") Give to the story:
-          a.btn.btn-primary.btn-lg(href="#/my/donate/details", role="button", style="padding-left: 2em; padding-right: 2em;") Give now
-          h5(style="padding-bottom: 0.75em; font-style: italic;") Share the story:
-          ul.social-media
-            li(style="font-size: 0.75em;"): a(href="#"): i.fa.fa-facebook-square.white
-            li(style="font-size: 0.75em;"): a(href="#"): i.fa.fa-twitter.white
+        .col-md-3.col-md-offset-1.center
+          h5 Meet the family:
+          img.round-image(src="{project.photos.first.version(300,300).photo-url}", alt="Family")
+          h5 Give to the story:
+          a.btn.btn-lg.btn-blue(role="button" href="#/my/donate/details") Give now
+          h5 Share the story:
+          ul.square-social
+            li
+              a(href="#")
+                i.fa.fa-facebook-square.black
+            li
+              a(href="#")
+                i.fa.fa-twitter.black
     #story.container
       | {project.description}
     // Donate bottom
-    .section.donate-top.section-height(style="background-image: url('{project.banners.first.photo-url}');")
+    .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
       .container
         .donate-section.center
           .progress
@@ -86,12 +88,15 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
               span {project.progress.amount|money(2)}
             span Goal {project.goal|money(2)}
           p
-            a.btn.btn-lg.btn-transparent(href="#", role="button") Give to this Story
-          h4(style="font-style: italic; padding: 0.5em;") Share this story:
-          ul.social-media
-            li(style="font-size: 0.75em;"): a(href="#"): i.fa.fa-facebook-square.white
-            li(style="font-size: 0.75em;"): a(href="#"): i.fa.fa-twitter.white
-    // Separates Content and Footer
+            a.btn.btn-lg.btn-blue-translucent(href="#", role="button") Give to this Story
+          p.p-text Share this story:
+          ul.square-social
+            li
+              a(href="#")
+                i.fa.fa-facebook-square
+            li
+              a(href="#")
+                i.fa.fa-twitter
   append
     script(type="text/javascript").
       $('#story', function() {
