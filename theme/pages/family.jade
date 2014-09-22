@@ -1,0 +1,106 @@
+theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
+
+  // make sure the campaign can be loaded
+  require(:eval="project.id")
+  not-found Sorry, the project you're looking for could not be found. 
+
+  content
+    .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
+      .container
+        .donate-section.center
+          .donate-caption
+            h1 {project.name}
+            p(style="font-style: italic; padding: 0.3em;") {project.prop.subtitle}
+          .progress
+            .progress-bar(role="progressbar", aria-valuenow="{project.progress.fraction|multiply(100)}", aria-valuemin="0", aria-valuemax="100", style="width: 60%;")
+              span {project.progress.money|money(2)}
+            span Goal {project.target|money(2)}
+          p
+            a.btn.btn-lg.btn-blue-translucent(href="#/my/donate/details", role="button") Give to this Story
+          p.p-text Share this story:
+          ul.square-social
+            li
+              a(href="#")
+                i.fa.fa-facebook-square.white
+            li
+              a(href="#")
+                i.fa.fa-twitter.white
+    // Countdown section
+    .section.container.countdown.margin-bottom
+      .row.center
+        .row(style="padding: 0.5em;")
+        .col-md-4
+          h3 {project.timestamp.until.countdown.day} days {project.timestamp.until.countdown.minute} minutes left
+        .col-md-4.rl-border
+          h3
+            i.fa.fa-info-circle
+            | What"s the money for?
+        .col-md-4
+          a.btn.btn-lg.btn-dark-grey.btn-margin(role="button")
+            i.fa.fa-plus
+            | Start a fundraiser
+    // Video section
+    .section.video.section-height
+      //- <div class="embed-responsive embed-responsive-16by9 section-height"><iframe class="embed-responsive-item" src=""></iframe></div> 
+    // Summary
+    .section.container.border.summary
+      .row
+        .col-md-6
+          .col-md-6.margin-top
+            h3
+              | Updates
+              span.badge {project.posts.length}
+          .col-md-6.margin-top
+            h3
+              | Givers
+              span.badge {project.members.length}
+        .col-md-6
+          h3
+            | Adoption Agency:
+            a.btn.btn-clear-2(role="button")  SoCal Adoption
+    // Story
+    .story-1.section.container
+      .row
+        .col-md-8
+          h2 Our story in our words
+          | {project.summary}
+        .col-md-3.col-md-offset-1.center
+          h5 Meet the family:
+          img.round-image(src="{project.photos.first.version(300,300).photo-url}", alt="Family")
+          h5 Give to the story:
+          a.btn.btn-lg.btn-blue(role="button" href="#/my/donate/details") Give now
+          h5 Share the story:
+          ul.square-social
+            li
+              a(href="#")
+                i.fa.fa-facebook-square.black
+            li
+              a(href="#")
+                i.fa.fa-twitter.black
+    #story.container
+      | {project.description}
+    // Donate bottom
+    .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
+      .container
+        .donate-section.center
+          .progress
+            .progress-bar(role="progressbar", aria-valuenow="{project.progress.fraction|multiply(100)}", aria-valuemin="0", aria-valuemax="100")
+              span {project.progress.amount|money(2)}
+            span Goal {project.goal|money(2)}
+          p
+            a.btn.btn-lg.btn-blue-translucent(href="#", role="button") Give to this Story
+          p.p-text Share this story:
+          ul.square-social
+            li
+              a(href="#")
+                i.fa.fa-facebook-square
+            li
+              a(href="#")
+                i.fa.fa-twitter
+  append
+    script(type="text/javascript").
+      $('#story', function() {
+      $this = $('#story');
+      var text = $this.find('img').attr('alt');
+      $this.find('img').wrap('<div class="full-width"></div>').parent().append('<div class="container" style="position: absolute; top: 0; left: 45px;"><h3 style="color: white;">' + text + '</div></h3>').parent().addClass('bump');
+      });
