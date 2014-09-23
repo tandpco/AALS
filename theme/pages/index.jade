@@ -96,16 +96,16 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           h2 Connect with us:
           ul.social-media
             li
-              a.connect-social(href="#")
+              a(href="{:settings.facebook-page}")
                 i.fa.fa-facebook
             li
-              a.connect-social(href="#")
+              a(href="https://twitter.com/{:settings.social-twitter}")
                 i.fa.fa-twitter
             li
-              a.connect-social(href="#")
+              a(href="http://instagram.com/{:settings.social-instagram}")
                 i.fa.fa-instagram
             li
-              a.connect-social(href="#")
+              a(href="{:settings.social-youtube}")
                 i.fa.fa-youtube-play
 // JS Files
 script(src="assets://js/layerslider.kreaturamedia.jquery.js", type="text/javascript")

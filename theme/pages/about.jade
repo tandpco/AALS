@@ -47,22 +47,24 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           h5 Connect:
           ul.social-media.inline-social
             li
-              a(href="#")
+              a(href="{:settings.facebook-page}")
                 i.fa.fa-facebook
             li
-              a(href="#")
+              a(href="https://twitter.com/{:settings.social-twitter}")
                 i.fa.fa-twitter
             li
-              a(href="#")
+              a(href="http://instagram.com/{:settings.social-instagram}")
                 i.fa.fa-instagram
             li
-              a(href="#")
+              a(href="{:settings.social-youtube}")
                 i.fa.fa-youtube-play
           h5 Contact:
           p
             a(href="mailto:info@aals.com", target="_top") info@aals.com
           address
-            p {:settings.organization-address}
+            p {:settings.organization-address-street}
+            p {:settings.organization-address-street2}
+            p {:settings.organization-address-city}, {:settings.organization-address-state} {:settings.organization-address-zipcode}  
             p {:settings.organization-phone}
     // Separates Content and Footer
     .container.center.connect
