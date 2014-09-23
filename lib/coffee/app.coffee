@@ -17,7 +17,10 @@ $ ->
     FB.ui obj, callback
     return
   $("a.social-button.twitter, a[rel=twitter-share]").click ->
-    message = encodeURIComponent($(this).data("message"))
+    if not $(this).data("message")
+      message = encodeURIComponent($("title").text())
+    else
+      message = encodeURIComponent($(this).data("message"))
     link = encodeURIComponent((if $(this).data("link") then $(this).data("link") else window.location.href))
     left = (screen.width / 2) - (550 / 2)
     top = (screen.height / 2) - (450 / 2)
