@@ -6,12 +6,20 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
 
   content
     // Top
+    //@IF :get.success
+    .col-md-12.contact-top
+      .container
+        .caption.center
+          h2(style="color: #fff;") Thank you for your interest!
+          h4: em We'll be in touch.
+    //@ELSE
     .col-md-12.contact-top
       .container
         .caption.center
           h2(style="color: #fff;") Contact
           h4
             em Here&#8217;s where you say &#8220;what up&#8221;
+    //@ENDIF
     // Top white
     .col-md-12.contact-white.spread-section
       .container
@@ -40,7 +48,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
         li
           a(href="{:settings.social-youtube}")
             i.fa.fa-youtube-play
-    // 
+    //@IF !:get.success
     .container.contact-white
       .col-md-10.col-md-offset-1
         .caption.center
@@ -61,7 +69,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             | <input type="hidden" name="contact[opt-in]" value="0" />
             | <input type="hidden" name="--namespace" value="signup-form" />
             | <input type="hidden" name="--failure" value="/contact" />
-            | <input type="hidden" name="--success" value="/contact" />
+            | <input type="hidden" name="--success" value="/contact?success=true" />
 
             .form-group
               input#input-name.form-control.contact-form(type="text",  name="contact[name]", placeholder="Your Name:")
@@ -70,6 +78,8 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             .form-group
               textarea.form-control.contact-form(rows="9",name="contact[bio]", placeholder="Tell us a little about your story:")
             button.btn.btn-dark-grey.btn-lg(type="submit")  Submit
+
+    //@ENDIF
     // Footer
     // Separates Content and Footer
     .container.center.connect
