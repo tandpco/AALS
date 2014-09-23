@@ -46,3 +46,25 @@ width: 100%;
   padding: 30px;
   border-radius: 3px;
 }
+#startFundraiser
+	p
+		color #a6a6a6
+		font-weight 500
+	a.btn.btn-primary
+		background-color #28a0b4
+		border 0
+		border-radius 3px
+		padding 15px 30px
+		text-transform uppercase
+// STYLES TO MAKE THE MODAL TRIGGERS BEHAVE LIKE ACTIONABLE BUTTONS
+a,img,h3
+	&[data-toggle='modal']
+		cursor: pointer
+		transition-duration: 0.5s
+img[data-toggle='modal']
+	&:hover, &:focus, &:active
+		border: 8px solid #35d6f0
+h3,a
+	&[data-toggle='modal']
+		&:hover, &:focus, &:tab
+			color: black

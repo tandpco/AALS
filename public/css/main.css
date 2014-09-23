@@ -9,3 +9,8 @@
 #startFundraiser ul,#projectUpdates ul,#moneyUsage ul,#familyModal ul{padding:0;margin:0}
 #startFundraiser > .modal-dialog.modal-sm,#projectUpdates > .modal-dialog.modal-sm,#moneyUsage > .modal-dialog.modal-sm,#familyModal > .modal-dialog.modal-sm{width:550px}
 #startFundraiser > .modal-dialog.modal-sm > .modal-content,#projectUpdates > .modal-dialog.modal-sm > .modal-content,#moneyUsage > .modal-dialog.modal-sm > .modal-content,#familyModal > .modal-dialog.modal-sm > .modal-content{padding:30px;-webkit-border-radius:3px;border-radius:3px}
+#startFundraiser p{color:#a6a6a6;font-weight:500}
+#startFundraiser a.btn.btn-primary{background-color:#28a0b4;border:0;-webkit-border-radius:3px;border-radius:3px;padding:15px 30px;text-transform:uppercase}
+a[data-toggle='modal'],img[data-toggle='modal'],h3[data-toggle='modal']{cursor:pointer;-webkit-transition-duration:.5s;-moz-transition-duration:.5s;-o-transition-duration:.5s;-ms-transition-duration:.5s;transition-duration:.5s}
+img[data-toggle='modal']:hover,img[data-toggle='modal']:focus,img[data-toggle='modal']:active{border:8px solid #35d6f0}
+h3[data-toggle='modal']:hover,a[data-toggle='modal']:hover,h3[data-toggle='modal']:focus,a[data-toggle='modal']:focus,h3[data-toggle='modal']:tab,a[data-toggle='modal']:tab{color:#000}
