@@ -61,12 +61,12 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
     .container.center.push-down
       .form.col-md-8.col-md-offset-2
         .container-fluid
-          form(action="/act/contact/create",role="form", style="padding: 2.0em;")
+          form(action="/act/contact/create",role="form",id="form", style="padding: 2.0em;")
             | <:module slug="messages-display" namespace="signup-form" />
             | <input type="hidden" name="contact[tags]" value="members:contact-form" />
             | <input type="hidden" name="contact[opt-in]" value="0" />
             | <input type="hidden" name="--namespace" value="signup-form" />
-            | <input type="hidden" name="--failure" value="/contact" />
+            | <input type="hidden" name="--failure" value="/contact#form" />
             | <input type="hidden" name="--success" value="/contact?success=true" />
 
             .form-group

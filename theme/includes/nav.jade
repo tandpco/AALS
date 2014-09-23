@@ -22,6 +22,10 @@ nav.navbar.navbar-transparent(role="navigation")
         li(class="{:url.1 == 'contact' ? 'active'}")
           a(href="contact") Contact
         li
+          //@IF :member.id
+          a.login.rain(href="#/my/portal" data-action="portal") Dashboard
+          //@ELSE
           a.login.rain(href="#/my/login" data-action="login") Login
+          //@ENDIF
     // /.navbar-collapse
   // /.container-fixed
