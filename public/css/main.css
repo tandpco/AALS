@@ -13,9 +13,10 @@
 #startFundraiser > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,#projectUpdates > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,#moneyUsage > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,.special-modal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,#familyModal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary{background-color:#28a0b4;border:0;-webkit-border-radius:3px;border-radius:3px;padding:15px 30px;text-transform:uppercase;}
 #startFundraiser > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,#projectUpdates > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,#moneyUsage > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,.special-modal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,#familyModal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold{font-family:"brandon-grotesque";font-size:20px;font-weight:500;letter-spacing:1px;margin-top:20px}
 #startFundraiser p{color:#a6a6a6;font-weight:500}
-a[data-toggle='modal'],img[data-toggle='modal'],h3[data-toggle='modal']{cursor:pointer;-webkit-transition-duration:.5s;-moz-transition-duration:.5s;-o-transition-duration:.5s;-ms-transition-duration:.5s;transition-duration:.5s}
+a[data-toggle='modal'],img[data-toggle='modal'],h3[data-toggle='modal']{cursor:pointer;-webkit-transition-duration:.5s;-moz-transition-duration:.5s;-o-transition-duration:.5s;-ms-transition-duration:.5s;transition-duration:.5s;}
+a[data-toggle='modal']:hover,img[data-toggle='modal']:hover,h3[data-toggle='modal']:hover{color:#35d6f0}
 img[data-toggle='modal']:hover,img[data-toggle='modal']:focus,img[data-toggle='modal']:active{border:8px solid #35d6f0}
-h3[data-toggle='modal']:hover,a[data-toggle='modal']:hover,h3[data-toggle='modal']:focus,a[data-toggle='modal']:focus,h3[data-toggle='modal']:tab,a[data-toggle='modal']:tab{color:#000}
+h3[data-toggle='modal']:hover{color:#35d6f0}
 .contact-white p,.contact p{margin:.8em 0}
 .module-messages-display .error{font-weight:bold;font-size:16px;color:#c20000;margin-bottom:20px}
 .login{background-color:rgba(0,0,0,0.6)}

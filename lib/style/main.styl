@@ -61,13 +61,13 @@ a,img,h3
 	&[data-toggle='modal']
 		cursor: pointer
 		transition-duration: 0.5s
+		&:hover
+			color: #35d6f0
 img[data-toggle='modal']
 	&:hover, &:focus, &:active
 		border: 8px solid #35d6f0
-h3,a
-	&[data-toggle='modal']
-		&:hover, &:focus, &:tab
-			color: black
+h3[data-toggle='modal']:hover
+	color: #35d6f0
 
 .contact-white p
 .contact p
