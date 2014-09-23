@@ -1,4 +1,4 @@
-theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
+theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Wright Family Family")
 
   // make sure the campaign can be loaded
   require(:eval="project.id")
@@ -23,7 +23,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           p.p-text Share this story:
           ul.square-social
             li
-              a(href="#" rel="facebook-share")
+              a(href="#" rel="facebook-share", data-name="{project.name}")
                 i.fa.fa-facebook-square.white
             li
               a(href="#" rel="twitter-share")
@@ -73,7 +73,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           h5 Share the story:
           ul.square-social
             li
-              a(href="#" rel="facebook-share")
+              a(href="#" rel="facebook-share", data-name="{project.name}")
                 i.fa.fa-facebook-square.black
             li
               a(href="#" rel="twitter-share")
@@ -83,7 +83,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           p {project.summary}
           {project.description}
     //- Donate bottom
-    .section.donate-top.section-height
+    .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
       .container
         .donate-section.center
           .progress-bar-wrapper
@@ -97,7 +97,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           p.p-text Share this story:
           ul.square-social
             li
-              a(href="#" rel="facebook-share")
+              a(href="#" rel="facebook-share", data-name="{project.name}")
                 i.fa.fa-facebook-square
             li
               a(href="#" rel="twitter-share")
