@@ -30,3 +30,4 @@ h3[data-toggle='modal']:hover{color:#35d6f0}
 .engage-top .caption{margin-top:200px;}
 .engage-top .caption h2{font-size:48px;font-family:"brandon-grotesque";text-transform:uppercase;font-weight:500;margin-bottom:0}
 .engage-top .caption h3{font-size:30px;font-weight:300}
+.section.video:hover{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80);cursor:pointer}
