@@ -11,7 +11,7 @@
 
         ul
           li
-            h6 Step 1: Create An Account
+            h6(style="text-decoration:{:member ? 'line-through' : 'none'}") Step 1: Create An Account
             p Before you can begin a fundraiser you must first create an account. You can do that here: 
           li
             h6 Step 2: Share The Project
@@ -20,4 +20,18 @@
           li
             h6 Step 3: Track Your Results
             p Finally, once you’ve shared the project with your network, you can login to your account and see how much you’ve raised from your project.
-        p: a.btn.btn-primary.bold start YOUR fundraiser NOW!
+        //@IF :member.id
+        .center
+          div(style="padding:20px 0")
+            label Here's your unique link.
+            input(type="text",value="{:e.url.link(/family)}?_m={:member.id}").form-control
+          a.btn.btn-blue-translucent.btn-lg(role="button",rel="twitter-share",data-link="{:e.url.link(/family)}?_m={:member.id}")
+            i.fa.fa-twitter.white &nbsp;
+            | Tweet
+          |  
+          a.btn.btn-fb.btn-lg(role="button", rel="facebook-share",data-link="{:e.url.link(/family)}?_m={:member.id}")
+            i.fa.fa-facebook-square.white &nbsp;
+            | Share
+        //@ELSEIF
+        p: a.btn.btn-primary.bold(href="#/my/register") start YOUR fundraiser NOW!
+        //@ENDIF

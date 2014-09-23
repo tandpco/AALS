@@ -1,10 +1,11 @@
-theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Wright Family Family")
+theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Wright Family")
 
   // make sure the campaign can be loaded
   require(:eval="project.id")
   not-found Sorry, the project you're looking for could not be found. 
-
   content
+    ssl:on
+
     //- Donate top
     .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
       .container
@@ -35,11 +36,11 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
         .col-md-4
           h3 {project.timestamp.until.countdown.day} days {project.timestamp.until.countdown.minute} minutes left
         .col-md-4.rl-border
-          h3(data-toggle="modal", data-target="#moneyUsage")
+          h3
             i.fa.fa-info-circle &nbsp; 
             | What's the money for?
         .col-md-4
-          a.btn.btn-lg.btn-dark-grey.btn-margin(role="button", data-toggle="modal", data-target="#startFundraiser")
+          a.btn.btn-lg.btn-dark-grey.btn-margin(role="button", data-toggle="modal", data-target="#fundraiserModal")
             i.fa.fa-plus &nbsp;
             | Start a fundraiser
     //- Video section
@@ -65,7 +66,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             a.btn.btn-clear-2(role="button") {project.prop.adoption-agency}
     div
       .family-caption.container
-        aside.col-md-3.pull-right.center
+        aside.col-md-3.pull-right.center(style="background-color: rgba(255,255,255,1);padding-bottom:20px")
           h5 Meet the family:
           img.round-image.img-responsive(src="{project.photos.first.version(300,300)}", alt="Family", data-toggle="modal", data-target="#familyModal")
           h5 Give to the story:
@@ -152,28 +153,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
       .modal-dialog.modal-lg
         .modal-content(style="padding:30px") {project.videos.first.embed(100%,500)}
     //- Start A Fundraiser
-    #startFundraiser.modal.fade(tabindex="-1", role="dialog", aria-labelledby="startFundraiser", aria-hidden="true")
-      .modal-dialog.modal-sm
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal")
-              span(aria-hidden="true") &#215;
-              span.sr-only Close
-            h3#startFundraiser.modal-title How To:
-              br
-              | Start A Fundraiser
-          .modal-body
-            p First, thank you! Your help making this Love Story possible is an investment in the future.
-            h6 Step 1: Create an Account
-            p Before you begin a fundraiser, you must first create an account.
-            br
-            h6 Step 2: Share the Project
-            p Next you’ll need to visit the family’s project page and share the project to your friends using Facebook and Twitter. When you share you can customize your message.
-            br
-            h6 Step 3: Track Your Results
-            p Finally, once you’ve shared the project with your network, you can login to your account and see how much you’ve raised from your project. 
-            br
-            a.btn.btn-primary(href="#/my/register") START YOUR FUNDRAISER NOW!
+    theme:embed(file="modals/fundraise")
   append
     script(type="text/javascript").
       $('article.static img').each(function() {

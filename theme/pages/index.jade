@@ -4,27 +4,23 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
   require(:eval="project.id")
   not-found Sorry, the project you're looking for could not be found. 
 
-  content
+  content(:load=":api(3.0).content(site.home) as home")
     // Begin Main Slider
     #layerslider(style="width: 100%; height: 500px;")
       // Slide 1
       .ls-slide
         // slide background Image
-        img.ls-bg(src="assets://images/Slider1.png", alt="Slide background")
-        h2.ls-l(style="top: 50%; left: 50%; text-align: center; color: #fff;")
-          | ADOPT THE
-          br
-          | MACINTOSH'S STORY
+        img.ls-bg(src="{home.relationships(image,attachments).first.version}", alt="Slide background")
+        h2.ls-l(style="top: 50%; left: 50%; text-align: center; color: #fff;") {home.content.header}
         h4.ls-l(style="top: 65%; left: 50%; text-align: center; color: #fff;")
-          em A Love Story About Music and Adoption
+          em {home.content.subtext} 
         p
-          a.ls-l.btn.btn-lg.btn-transparent(href="/family", role="button", style="top: 80%; left: 42%; text-align: center; color: #fff;")
-            | Learn the Story &nbsp;
+          a.ls-l.btn.btn-lg.btn-transparent(href="{home.content.action.href}", role="button", style="top: 80%; left: 42%; text-align: center; color: #fff;")
+            | {home.content.action.text} &nbsp;
             i.fa.fa-video-camera
     // About Text
     .jumbotron.container.center.border
-      p
-        | Adopt a Love Story is a non-profit dedicated to helping families overcome the financial barriers to adoption while creating a movement within communities that celebrates and joins in the beautiful love stories that are being written in every adoption.
+      p {home.content.intro}
       a.btn.btn-clear.btn-margin(href="/about", role="button") Learn more...
     // The story
     .container.the-story

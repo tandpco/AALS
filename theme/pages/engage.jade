@@ -20,7 +20,7 @@ theme:template(name="default", title="Engage")
           .caption.engage-gap
             h2 Engage the story
             p
-              | So you&#8217;ve joined the story but want to do more- we believe one of the powerful ways you can move from being part of the story to actually helping write a families adoptive love story is to help them raise the funds they need-
+              | So you&#8217;ve joined the story but want to do more- we believe one of the powerful ways you can move from being part of the story to actually helping write a families adoptive love story is to help them raise the funds they need.
           .col-md-6.paragraph-padding
             img.img-circle.round-image(src="assets://images/elliipse1.png", alt="")
             p
@@ -61,5 +61,20 @@ theme:template(name="default", title="Engage")
             p When you donate your life event we provide you with a unique link. Then, instead of receiving the stereotypical iTunes gift card from a friend, or socks from your great aunt, you share your unique link and suggest friends and family donate to the adoptive family your'e helping.
 
             p Through the account you set up on adoptalovestory.com you're able to track your progress and how much you've raised on behalf of the adoptive family.
-            p: a.btn.btn-primary.bold start YOUR fundraiser NOW!
+            //- p: a.btn.btn-primary.bold(href="#/my/register") start YOUR fundraiser NOW!
+            //@IF :member.id
+            .center
+              div(style="padding:20px 0")
+                label Here's your unique link.
+                input(type="text",value="{:e.url.link(/family)}?_m={:member.id}").form-control
+              a.btn.btn-blue-translucent.btn-lg(role="button",rel="twitter-share",data-link="{:e.url.link(/family)}?_m={:member.id}")
+                i.fa.fa-twitter.white &nbsp;
+                | Tweet
+              |  
+              a.btn.btn-fb.btn-lg(role="button", rel="facebook-share",data-link="{:e.url.link(/family)}?_m={:member.id}")
+                i.fa.fa-facebook-square.white &nbsp;
+                | Share
+            //@ELSEIF
+            p: a.btn.btn-primary.bold(href="#/my/register") start YOUR fundraiser NOW!
+            //@ENDIF
     theme:embed(file="modals/fundraise")

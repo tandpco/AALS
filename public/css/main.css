@@ -33,3 +33,6 @@ h3[data-toggle='modal']:hover{color:#35d6f0}
 .section.video{-webkit-transition-duration:.25s;-moz-transition-duration:.25s;-o-transition-duration:.25s;-ms-transition-duration:.25s;transition-duration:.25s;}
 .section.video:hover{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80);cursor:pointer}
 .contact-top,.engage-top{-webkit-background-size:cover;-moz-background-size:cover;background-size:cover}
+.about-top{background-image:url("../images/banner.jpg")}
+.engage-top{background-image:url("../images/banner-engage.jpg")}
+.contact-top{background-image:url("../images/contact-banner.jpg")}
