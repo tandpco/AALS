@@ -1,5 +1,5 @@
 theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
-
+  //- TODO: Address dissappeared from the footer
   // make sure the campaign can be loaded
   require(:eval="project.id")
   not-found Sorry, the project you're looking for could not be found. 
@@ -18,53 +18,45 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
         h4.ls-l(style="top: 65%; left: 50%; text-align: center; color: #fff;")
           em A Love Story About Music and Adoption
         p
-          a.ls-l.btn.btn-lg.btn-transparent(href="#", role="button", style="top: 80%; left: 42%; text-align: center; color: #fff;")
-            | Learn the Story
+          a.ls-l.btn.btn-lg.btn-transparent(href="/family", role="button", style="top: 80%; left: 42%; text-align: center; color: #fff;")
+            | Learn the Story &nbsp;
             i.fa.fa-video-camera
-      // Slider 2
-      .ls-slide
-        // slide background Image
-        img.ls-bg(src="assets://images/Slider1.png", alt="Slide background")
-      // Slider 3
-      .ls-slide
-        // slide background Image
-        img.ls-bg(src="assets://images/Slider1.png", alt="Slide background")
     // About Text
     .jumbotron.container.center.border
       p
         | Adopt a Love Story is a non-profit dedicated to helping families overcome the financial barriers to adoption while creating a movement within communities that celebrates and joins in the beautiful love stories that are being written in every adoption.
-      a.btn.btn-clear.btn-margin(href="#", role="button") Learn more...
+      a.btn.btn-clear.btn-margin(href="/about", role="button") Learn more...
     // The story
     .container.the-story
       .row.center
         .col-xs-12.col-sm-4.col-md-4
           .row
             .col-md-12.story
-              img.img-responsive.center-block(src="assets://images/engage.png", alt="T-shirt")
-              h3 Share the Story
+              img.img-responsive.center-block(src="assets://images/learn.png", alt="T-shirt")
+              h3 Learn the Story
               .story-content
                 p
                   | When you donate to a family&#8217;s adoptive expenses you not only help meet their physical needs&#8230;
                 p &#8230;you also get the privilege of being a part of a beautiful love story.
-              a.btn.btn-blue(href="#", role="button") Donate to an adoption
+              a.btn.btn-blue(href="/family#/my/donate?project={project.id}", role="button") Donate to an adoption
         .col-xs-12.col-sm-4.col-md-4
           .row
             .col-md-12.story
-              img.img-responsive.center-block(src="assets://images/engage.png", alt="T-shirt")
+              img.img-responsive.center-block(src="assets://images/run.png", alt="T-shirt")
               h3 Engage the Story
               .story-content
                 p
                   | Every good love story needs heroes. By starting a fundraiser campaign for an adoptive family you get the opportunity to be an ordinary, everyday hero that helps write a families&#8217; beautiful love story of adoption.
-              a.btn.btn-yellow(href="#", role="button") Start a Fundraiser
+              a.btn.btn-yellow(href="TODO: #DAVIDPUTSTUFFHERE", role="button") Start a Fundraiser
         .col-xs-12.col-sm-4.col-md-4
           .row
             article.col-md-12.story
-              img.img-responsive.center-block(src="assets://images/engage.png", alt="T-shirt")
+              img.img-responsive.center-block(src="assets://images/share.png", alt="T-shirt")
               h3 Share the Story
               .story-content
                 p
                   | Every good love story needs to be shared. Help spread the word and allow your friends and family the opportunity to Adopt a Love Story.
-              a.btn.btn-black(href="#", role="button") Share
+              a.btn.btn-black(href="TODO: What the hell does a 'share' button do?", role="button") Share
     // T-Shirts
     .t-shirts
       .container

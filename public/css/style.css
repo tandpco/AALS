@@ -7520,9 +7520,36 @@ button.close {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+.radius-0 {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
 .ls-slide h4 {
   font-family: "museo", serif;
   font-weight: normal;
+}
+.progress-bar-wrapper {
+  margin-bottom: 5em;
+}
+.progress-bar-wrapper .progress-bar {
+  background-color: #ffffff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.progress-bar-wrapper .progress-bar .progress-meter {
+  background-color: #e8f300;
+  height: 15px;
+}
+.progress-bar-wrapper .progress-text span {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "brandon-grotesque", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.bottom-progress > .donate-section {
+  margin-top: 15%!important;
 }
 h2 {
   font-size: 32px;
@@ -7929,7 +7956,7 @@ footer {
   background-position: center;
 }
 .donate-section {
-  margin: 24% 12% 5% 12%;
+  padding: 24% 12% 5% 12%;
   color: #ffffff;
 }
 .donate-section p {
@@ -8181,16 +8208,22 @@ footer {
   font-weight: normal;
   text-transform: none;
 }
-.contact p {
+.contact p,
+.contact-white p {
   color: #9f9f9f;
   font-size: 20px;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
-.contact p:last-child {
+.contact p:last-child,
+.contact-white p:last-child {
   margin-top: 1em;
 }
-.contact p a {
+.contact p a,
+.contact-white p a {
   color: #35d6f0;
+}
+.contact address p {
+  margin-bottom: 0;
 }
 .contact h4 {
   font-family: "museo", serif;
