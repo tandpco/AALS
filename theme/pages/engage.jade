@@ -1,14 +1,10 @@
-theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
-  // make sure the campaign can be loaded
-  require(:eval="project.id")
-  not-found Sorry, the project you're looking for could not be found. 
-
+theme:template(name="default", title="Engage")
   content
     // Top
     .col-md-12.engage-top
       .container
         .caption.center
-          h2.banner-caption Enagage
+          h2.banner-caption Engage
           h3.banner-caption Ready to get involved?
     // Top white
     .col-md-12.engage-white.spread-section
@@ -16,7 +12,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
         .caption.center.engage-gap
           h3 Join the story
           p.push-down Join the story and be a part of a family&#8217;s adoptive journey.
-          a.btn.btn-primary.btn-lg(role="button") Give to a story
+          a.btn.btn-primary.btn-lg(role="button",href="/family") Give to a story
     // Engage the story
     .row.engage-story
       .container
@@ -28,25 +24,42 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           .col-md-6.paragraph-padding
             img.img-circle.round-image(src="assets://images/elliipse1.png", alt="")
             p
-              | If you"re excited to get started and simply want to donate an upcoming event in your life(think birthday or graduation), then jump in here:
+              | If you're excited to get started and simply want to donate an upcoming event in your life(think birthday or graduation), then jump in here:
             p
-              a.btn.btn-lg.btn-white(href="#", role="button") Give an event
+              a.btn.btn-lg.btn-white(href="#", role="button",data-toggle="modal", data-target="#eventModal") Give an event
           .col-md-6.paragraph-padding
             img.img-circle.round-image(src="assets://images/Ellipse2.png", alt="")
             p
               | If you&#8217;re one of those Type A, overachievers who won&#8217;t rest until you&#8217;ve reached a goal, then you should check out this:
             p
-              a.btn.btn-lg.btn-white(href="#", role="button") Start a fundraiser
+              a.btn.btn-lg.btn-white(href="#", role="button",data-toggle="modal", data-target="#fundraiserModal") Start a fundraiser
     // Share
     .col-md-12.share-story.spread-section
       .container
         .caption.center
           h3 Share the Story
           p share Adopt a Love Story with your Friends and Networks.
-          a.btn.btn-blue-translucent.btn-lg(role="button")
+          a.btn.btn-blue-translucent.btn-lg(role="button",rel="twitter-share")
             i.fa.fa-twitter.white &nbsp;
             | Tweet
-          a.btn.btn-fb.btn-lg(role="button")
+          a.btn.btn-fb.btn-lg(role="button",rel="facebook-share",data-ref="test")
             i.fa.fa-facebook-square.white &nbsp;
             | Share
      .container.center.connect
+
+    #eventModal.special-modal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="eventModal", aria-hidden="true")
+      .modal-dialog.modal-sm
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h3.modal-title How To:<br>Give an Event
+          .modal-body
+            p Everyone knows that momentous events are best when you share the love and joy with others. Whether it's a birthday, high-school / college graduation, or wedding, you can use your day of celebration to help a family reach their goal of adopting a child. 
+
+            p When you donate your life event we provide you with a unique link. Then, instead of receiving the stereotypical iTunes gift card from a friend, or socks from your great aunt, you share your unique link and suggest friends and family donate to the adoptive family your'e helping.
+
+            p Through the account you set up on adoptalovestory.com you're able to track your progress and how much you've raised on behalf of the adoptive family.
+            p: a.btn.btn-primary.bold start YOUR fundraiser NOW!
+    theme:embed(file="modals/fundraise")

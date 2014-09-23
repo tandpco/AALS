@@ -16,46 +16,46 @@ display: block;
 height: 460px;
 width: 100%;
 }
-#startFundraiser .modal-header, 
-#projectUpdates .modal-header, 
-#moneyUsage .modal-header, 
-#familyModal .modal-header {
-  border-bottom: 0;
-  margin-bottom: -20px;
-}
-.modal-content li.update {
-  margin-top:20px;
-}
-#startFundraiser ul, 
-#projectUpdates ul, 
-#moneyUsage ul, 
-#familyModal ul {
-  padding: 0;
-  margin: 0;
-}
-#startFundraiser > .modal-dialog.modal-sm, 
-#projectUpdates > .modal-dialog.modal-sm, 
-#moneyUsage > .modal-dialog.modal-sm, 
-#familyModal > .modal-dialog.modal-sm {
-  width: 550px;
-}
-#startFundraiser > .modal-dialog.modal-sm > .modal-content, 
-#projectUpdates > .modal-dialog.modal-sm > .modal-content, 
-#moneyUsage > .modal-dialog.modal-sm > .modal-content,
-#familyModal > .modal-dialog.modal-sm > .modal-content {
-  padding: 30px;
-  border-radius: 3px;
-}
+
+#startFundraiser
+#projectUpdates
+#moneyUsage
+.special-modal
+#familyModal
+  .modal-header
+    border-bottom: 0;
+    margin-bottom: -20px;
+    h3.modal-title
+      font-size 28px
+  ul
+    padding: 0;
+    margin: 0;
+  > .modal-dialog.modal-sm
+    width 550px
+    > .modal-content
+      font-size 16px
+      color #969696
+      padding 30px
+      border-radius 3px
+      li.update
+        margin-top:20px;
+      a.btn.btn-primary
+        background-color #28a0b4
+        border 0
+        border-radius 3px
+        padding 15px 30px
+        text-transform uppercase
+        &.bold
+          font-family "brandon-grotesque"
+          font-size 20px
+          font-weight 500
+          letter-spacing 1px
+          margin-top 20px
+
 #startFundraiser
 	p
 		color #a6a6a6
 		font-weight 500
-	a.btn.btn-primary
-		background-color #28a0b4
-		border 0
-		border-radius 3px
-		padding 15px 30px
-		text-transform uppercase
 // STYLES TO MAKE THE MODAL TRIGGERS BEHAVE LIKE ACTIONABLE BUTTONS
 a,img,h3
 	&[data-toggle='modal']
@@ -102,3 +102,18 @@ h3,a
 
 .progress-bar
   box-shadow none
+
+.engage-top .caption 
+  margin-top 200px
+  h2
+    font-size 48px
+    font-family "brandon-grotesque"
+    text-transform uppercase
+    font-weight 500
+    margin-bottom 0
+  h3
+    font-size 30px
+    font-weight 300
+
+
+

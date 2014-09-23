@@ -1,4 +1,4 @@
-theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Macintosh Family")
+theme:template(name="default", :load=":api(3.0).projects(246) as project", title="Welcome")
   //- TODO: Address dissappeared from the footer
   // make sure the campaign can be loaded
   require(:eval="project.id")
@@ -47,7 +47,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
               .story-content
                 p
                   | Every good love story needs heroes. By starting a fundraiser campaign for an adoptive family you get the opportunity to be an ordinary, everyday hero that helps write a families&#8217; beautiful love story of adoption.
-              a.btn.btn-yellow(href="TODO: #DAVIDPUTSTUFFHERE", role="button") Start a Fundraiser
+              a.btn.btn-yellow(data-toggle="modal", data-target="#fundraiserModal", role="button") Start a Fundraiser
         .col-xs-12.col-sm-4.col-md-4
           .row
             article.col-md-12.story
@@ -56,7 +56,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
               .story-content
                 p
                   | Every good love story needs to be shared. Help spread the word and allow your friends and family the opportunity to Adopt a Love Story.
-              a.btn.btn-black(href="TODO: What the hell does a 'share' button do?", role="button") Share
+              a.btn.btn-black(rel="facebook-share", role="button") Share
     // T-Shirts
     .t-shirts
       .container
@@ -99,6 +99,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             li
               a(href="{:settings.social-youtube}")
                 i.fa.fa-youtube-play
+    theme:embed(file="modals/fundraise")
 // JS Files
 script(src="assets://js/layerslider.kreaturamedia.jquery.js", type="text/javascript")
 // Slider Script Settings

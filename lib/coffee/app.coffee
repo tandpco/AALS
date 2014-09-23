@@ -4,9 +4,10 @@ $ ->
     
     # calling the API ...
     callback = (response) ->
+      console.log response
     obj =
       method: "feed"
-      redirect_uri: window.location.href
+      # redirect_uri: window.location.href
       link: options.link
       description: options.message
 
@@ -21,7 +22,7 @@ $ ->
       message = encodeURIComponent($("title").text())
     else
       message = encodeURIComponent($(this).data("message"))
-    link = encodeURIComponent((if $(this).data("link") then $(this).data("link") else window.location.href))
+    link = encodeURIComponent((if $(this).data("link") then $(this).data("link") else (if window.location.search || !window.$memberId then window.location.href else window.location.href+'?_m='+window.$memberId)))
     left = (screen.width / 2) - (550 / 2)
     top = (screen.height / 2) - (450 / 2)
     window.open "https://twitter.com/share?url=" + link + "&text=" + message, "twittershare", "menubar=0,resizable=1,width=550,height=450,scrollbars=0,location=0,directories=0,toolbar=0,top=" + top + ",left=" + left
@@ -37,7 +38,7 @@ $ ->
   $("a.social-button.facebook, a[rel=facebook-share]").click ->
     options = {}
     options.message = ($(this).data("message"))
-    options.link = ((if $(this).data("link") then $(this).data("link") else window.location.href))
+    options.link = ((if $(this).data("link") then $(this).data("link") else (if window.location.search || !window.$memberId then window.location.href else window.location.href+'?_m='+window.$memberId)))
     options.photo = $(this).data("photo")  if $(this).data("photo")
     options.ref = $(this).data("ref")  if $(this).data("ref")
     options.name = $(this).data("name")  if $(this).data("name")

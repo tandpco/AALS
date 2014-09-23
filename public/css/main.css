@@ -4,13 +4,15 @@
 .full-width{position:absolute;left:0;right:0;height:460px;overflow:hidden}
 .full-width img{width:100%}
 .bump{display:block;height:460px;width:100%}
-#startFundraiser .modal-header,#projectUpdates .modal-header,#moneyUsage .modal-header,#familyModal .modal-header{border-bottom:0;margin-bottom:-20px}
-.modal-content li.update{margin-top:20px}
-#startFundraiser ul,#projectUpdates ul,#moneyUsage ul,#familyModal ul{padding:0;margin:0}
-#startFundraiser > .modal-dialog.modal-sm,#projectUpdates > .modal-dialog.modal-sm,#moneyUsage > .modal-dialog.modal-sm,#familyModal > .modal-dialog.modal-sm{width:550px}
-#startFundraiser > .modal-dialog.modal-sm > .modal-content,#projectUpdates > .modal-dialog.modal-sm > .modal-content,#moneyUsage > .modal-dialog.modal-sm > .modal-content,#familyModal > .modal-dialog.modal-sm > .modal-content{padding:30px;-webkit-border-radius:3px;border-radius:3px}
+#startFundraiser .modal-header,#projectUpdates .modal-header,#moneyUsage .modal-header,.special-modal .modal-header,#familyModal .modal-header{border-bottom:0;margin-bottom:-20px;}
+#startFundraiser .modal-header h3.modal-title,#projectUpdates .modal-header h3.modal-title,#moneyUsage .modal-header h3.modal-title,.special-modal .modal-header h3.modal-title,#familyModal .modal-header h3.modal-title{font-size:28px}
+#startFundraiser ul,#projectUpdates ul,#moneyUsage ul,.special-modal ul,#familyModal ul{padding:0;margin:0}
+#startFundraiser > .modal-dialog.modal-sm,#projectUpdates > .modal-dialog.modal-sm,#moneyUsage > .modal-dialog.modal-sm,.special-modal > .modal-dialog.modal-sm,#familyModal > .modal-dialog.modal-sm{width:550px;}
+#startFundraiser > .modal-dialog.modal-sm > .modal-content,#projectUpdates > .modal-dialog.modal-sm > .modal-content,#moneyUsage > .modal-dialog.modal-sm > .modal-content,.special-modal > .modal-dialog.modal-sm > .modal-content,#familyModal > .modal-dialog.modal-sm > .modal-content{font-size:16px;color:#969696;padding:30px;-webkit-border-radius:3px;border-radius:3px;}
+#startFundraiser > .modal-dialog.modal-sm > .modal-content li.update,#projectUpdates > .modal-dialog.modal-sm > .modal-content li.update,#moneyUsage > .modal-dialog.modal-sm > .modal-content li.update,.special-modal > .modal-dialog.modal-sm > .modal-content li.update,#familyModal > .modal-dialog.modal-sm > .modal-content li.update{margin-top:20px}
+#startFundraiser > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,#projectUpdates > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,#moneyUsage > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,.special-modal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary,#familyModal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary{background-color:#28a0b4;border:0;-webkit-border-radius:3px;border-radius:3px;padding:15px 30px;text-transform:uppercase;}
+#startFundraiser > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,#projectUpdates > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,#moneyUsage > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,.special-modal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold,#familyModal > .modal-dialog.modal-sm > .modal-content a.btn.btn-primary.bold{font-family:"brandon-grotesque";font-size:20px;font-weight:500;letter-spacing:1px;margin-top:20px}
 #startFundraiser p{color:#a6a6a6;font-weight:500}
-#startFundraiser a.btn.btn-primary{background-color:#28a0b4;border:0;-webkit-border-radius:3px;border-radius:3px;padding:15px 30px;text-transform:uppercase}
 a[data-toggle='modal'],img[data-toggle='modal'],h3[data-toggle='modal']{cursor:pointer;-webkit-transition-duration:.5s;-moz-transition-duration:.5s;-o-transition-duration:.5s;-ms-transition-duration:.5s;transition-duration:.5s}
 img[data-toggle='modal']:hover,img[data-toggle='modal']:focus,img[data-toggle='modal']:active{border:8px solid #35d6f0}
 h3[data-toggle='modal']:hover,a[data-toggle='modal']:hover,h3[data-toggle='modal']:focus,a[data-toggle='modal']:focus,h3[data-toggle='modal']:tab,a[data-toggle='modal']:tab{color:#000}
@@ -24,3 +26,6 @@ h3[data-toggle='modal']:hover,a[data-toggle='modal']:hover,h3[data-toggle='modal
 .navbar-transparent .nav li a{font-size:18px}
 .navbar-transparent .nav li.active a{color:#e8f300}
 .progress-bar{-webkit-box-shadow:none;box-shadow:none}
+.engage-top .caption{margin-top:200px;}
+.engage-top .caption h2{font-size:48px;font-family:"brandon-grotesque";text-transform:uppercase;font-weight:500;margin-bottom:0}
+.engage-top .caption h3{font-size:30px;font-weight:300}
