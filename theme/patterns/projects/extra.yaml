@@ -1,0 +1,12 @@
+pattern:
+  -
+    key: family
+    format: blocks
+    name: Family Members
+    singular: Person
+    pattern: family-member
+    preview: name
+  -
+    key: money
+    format: html
+    name: Money Usage

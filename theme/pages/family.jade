@@ -108,7 +108,13 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
               span.sr-only Close
             h3#familyModalLabel.modal-title Meet The Family
           .modal-body
-            | ...
+            ul
+              li(class="update",:load="project.content(1).slug(extra).relationships(family) as person", :iterate="self")
+                .row
+                  .col-md-4: img.round-image.img-responsive(src="{person.relationships(image,attachments).first.version(200,200)}")
+                  .col-md-8
+                    h6 {person.content.name}
+                    div {person.content.bio}
     //- What Will The Money Be Used For?
     #moneyUsage.modal.fade(tabindex="-1", role="dialog", aria-labelledby="moneyUsage", aria-hidden="true")
       .modal-dialog.modal-sm
@@ -119,7 +125,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
               span.sr-only Close
             h3#moneyUsage.modal-title What will the money be used for:
           .modal-body
-            | ...
+            div(style="margin-top:20px") {project.content(1).slug(extra).content.money}
     //- What Will The Money Be Used For?
     #projectUpdates.modal.fade(tabindex="-1", role="dialog", aria-labelledby="projectUpdates", aria-hidden="true")
       .modal-dialog.modal-sm

@@ -1,0 +1,13 @@
+pattern:
+  - 
+    key: name
+    format: title
+    name: Name
+  -
+    key: bio
+    format: html
+    name: Bio
+  -
+    key: image
+    format: upload
+    name: Photo
