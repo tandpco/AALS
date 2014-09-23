@@ -13,6 +13,7 @@ html(lang="en")
     script(src="https://code.jquery.com/jquery-1.11.1.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
     script(src="assets://js/greensock.js", type="text/javascript")
+    script(src="assets://js/build.js", type="text/javascript")
     script(src="//use.typekit.net/laf1bvf.js")
     script(:ignore="true").
       try{Typekit.load();}catch(e){}
@@ -26,3 +27,7 @@ html(lang="en")
     | <:jolt placeholder="content" />
     theme:embed(file="includes/footer")
     | <:jolt placeholder="append" />
+
+    script(type="text/javascript").
+      var facebookAppId = '{:settings.facebook-app-id}';
+      var facebookChannelFile = '//{:e.url.domain()}/act/session/facebook_channel_file';
