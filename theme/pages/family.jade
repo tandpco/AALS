@@ -4,7 +4,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
   require(:eval="project.id")
   not-found Sorry, the project you're looking for could not be found. 
   content
-    ssl:on
+    | <:ssl:on />
 
     //- Donate top
     .section.donate-top.section-height(style="background-image: url('{project.banners.first.version}');")
@@ -34,7 +34,15 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
       .row.center
         .row(style="padding: 0.5em;")
         .col-md-4
-          h3 {project.timestamp.until.countdown.day} days {project.timestamp.until.countdown.minute} minutes left
+          //@IF project.timestamp.until.countdown.week
+          h3 {project.timestamp.until.countdown.week} {project.timestamp.until.countdown.week|pluraltext(week,weeks)} 
+            //@IF project.timestamp.until.countdown.day
+            {project.timestamp.until.countdown.day} {project.timestamp.until.countdown.day|pluraltext(day,days)} 
+            //@ENDIF
+            |  left
+          //@ELSE
+          h3 {project.timestamp.until.countdown.day} {project.timestamp.until.countdown.day|pluraltext(day,days)} {project.timestamp.until.countdown.hour} {project.timestamp.until.countdown.hour|pluraltext(hour,hours)} left
+          //@ENDIF
         .col-md-4.rl-border
           h3
             i.fa.fa-info-circle &nbsp; 
@@ -44,7 +52,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             i.fa.fa-plus &nbsp;
             | Start a fundraiser
     //- Video section
-    .section.video.section-height(data-toggle="modal",data-target="#videoModal")
+    a.section.video.section-height(data-toggle="modal",data-target="#videoModal")
        //- <div class="embed-responsive embed-responsive-16by9 section-height">
        //-    <iframe class="embed-responsive-item" src=""></iframe>
        //-  </div> 
