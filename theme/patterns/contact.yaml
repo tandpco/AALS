@@ -1,0 +1,25 @@
+page:
+  path: /site
+  slug: contact
+  name: Contact Us
+pattern:
+  - 
+    key: header
+    format: title
+    name: Header Title
+  - 
+    key: subtext
+    format: string
+    name: Header Subtext
+  -
+    key: body
+    format: html
+    name: Body
+  - 
+    key: thankyouhead
+    format: title
+    name: Thankyou Title
+  - 
+    key: thankyousub
+    format: string
+    name: Thankyou Subtext

@@ -1,48 +1,19 @@
-theme:template(name="default", :load=":api(3.0).projects(246) as project", title="About")
+theme:template(name="default", title="About")
 
-  // make sure the campaign can be loaded
-  require(:eval="project.id")
-  not-found Sorry, the project you're looking for could not be found. 
-
-  content
+  content(:load=":api(3.0).content(site.about) as about")
     // Top
     .col-md-12.about-top
       .container
         .caption.center.banner-caption
-          h2
-            | ABOUT
-            br
-            | ADOPT A LOVE STORY
+          h2 {about.content.header}
           h3.banner-caption
-            em Will you join the story?
+            em {about.content.subtext}
     // Content
     .col-md-12.contact
       .container
         .col-md-8.gap-vert
-          h2 About us
-          p We believe that adoption creates beautiful stories. Stories that are filled with ups and downs and celebrations and heartaches&#8230;
-          
-          p &#8230;yet each moment overflows with love, a love that is not based on sharing DNA, but a deliberate, chosen love.
-
-          p Adopt a Love Story is about celebrating the love story that starts when a family decides to commit to sacrifice and share their love, life and journey with a vulnerable and innocent child.
-
-          p But that&#8217;s not the only love story to tell.
-
-          p Each adoption also tells the story of a birth mother, who despite all other circumstances or challenges, chose to give her baby life. And in doing so wrote a love story of her own, a story of potential and promise for her child.
-
-          p But like all great love stories, they need to be shared. We believe that all the beautiful moments of those love stories - as well as the imperfections - are best celebrated and experienced in community.
-
-          p Adopt a Love Story was founded out of the goal to not only help adoptive families overcome the financial barriers to adoption, but to help each family share the power of the love stories being written in their adoption process.
-
-          p Adopt a Love Story helps families share those stories, not with just their friends and family, but with a community of people that they&#8217;ve not yet met.
-
-          p We provide the community the platform and resources, not only to help provide the physical resources a family needs to adopt, but to also share in the beautiful story of committed, purposeful love.
-
-          p Each story is different and there are tears and joy found in each love story. The common thread throughout these stories though is that of deliberate, intentional love. Love stories that are written from a desire to sacrifice one self for the life of a child that hasn&#8217;t yet been met.
-
-          p We believe that a redeeming, deliberate, life-saving love is an echo of the most beautiful love story of all time.
-          br
-          h4.about-cta: a(href="/family") Will you join the story?
+          | {about.content.body}
+          h4.about-cta Will you join the story?
         .col-md-3.col-md-offset-1.center
           h5 Connect:
           ul.social-media.inline-social

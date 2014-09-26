@@ -16,7 +16,11 @@ footer
           li: a(href="/family") Families
           li: a(href="/engage") Engage
           li: a(href="/contact") Contact
-          li: a(href="/story") My story
+          //@IF :member.id
+          li: a(href="#/my/portal") Dashboard
+          //@ELSE
+          li: a(href="#/my/login") My Story
+          //@ENDIF
       .col-xs-12.col-sm-4.col-md-4.footer-social
         h4 Connect: 
         br
