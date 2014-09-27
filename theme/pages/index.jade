@@ -24,7 +24,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
         h4.ls-l(style="top: 65%; left: 50%; text-align: center; color: #fff;")
           em {home.content.subtext} 
         p
-          a.ls-l.btn.btn-lg.btn-transparent(href="{home.content.action.href}")
+          a.ls-l.btn.btn-lg.btn-transparent.fixedBtn(href="{home.content.action.href}",style="display:block;height:31px;width:230px;margin:360px auto;position:initial !important;")
             | {home.content.action.text} &nbsp;
             i.fa.fa-video-camera
     // About Text
