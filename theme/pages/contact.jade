@@ -51,20 +51,19 @@ theme:template(name="default", title="Get In Touch")
     .container.center.push-down
       .form.col-md-8.col-md-offset-2
         .container-fluid
-          form(action="/act/contact/create",role="form",id="form", style="padding: 2.0em;")
+          form(action="/api/3.0/form-completions",role="form",id="form", style="padding: 2.0em;", method="post")
             | <:module slug="messages-display" namespace="signup-form" />
-            | <input type="hidden" name="contact[tags]" value="members:contact-form" />
-            | <input type="hidden" name="contact[opt-in]" value="0" />
             | <input type="hidden" name="--namespace" value="signup-form" />
             | <input type="hidden" name="--failure" value="/contact#form" />
+            | <input type="hidden" name="--form" value="contact-form" />
             | <input type="hidden" name="--success" value="/contact?success=true" />
 
             .form-group
-              input#input-name.form-control.contact-form(type="text",  name="contact[name]", placeholder="Your Name:")
+              input#input-name.form-control.contact-form(type="text",  name="name", placeholder="Your Name:")
             .form-group
-              input#input-email.form-control.contact-form(type="email",name="contact[email]", placeholder="Your Email:")
+              input#input-email.form-control.contact-form(type="email",name="email", placeholder="Your Email:")
             .form-group
-              textarea.form-control.contact-form(rows="9",name="contact[bio]", placeholder="Tell us a little about your story:")
+              textarea.form-control.contact-form(rows="9",name="message", placeholder="Tell us a little about your story:")
             button.btn.btn-dark-grey.btn-lg(type="submit")  Submit
 
     //@ENDIF

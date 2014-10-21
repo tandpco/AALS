@@ -44,7 +44,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
           h3 {project.timestamp.until.countdown.day} {project.timestamp.until.countdown.day|pluraltext(day,days)} {project.timestamp.until.countdown.hour} {project.timestamp.until.countdown.hour|pluraltext(hour,hours)} left
           //@ENDIF
         .col-md-4.rl-border
-          h3
+          h3(data-toggle="modal", data-target="#moneyUsage")
             i.fa.fa-info-circle &nbsp; 
             | What's the money for?
         .col-md-4
