@@ -120,8 +120,23 @@ h3[data-toggle='modal']:hover
   &:hover
     opacity 0.8
     cursor pointer
-
-.contact-top, .engage-top
+.newFamBanner
+  background-image url('../images/newFamily.png')
+  background-position center center
+  background-repeat no-repeat
+  margin-bottom 60px
+  padding 250px 15px
+  text-align center
+  @media (min-width: 1920px)
+    background-position center -100px
+  h2
+    font-size 45px
+  em
+    font-size 30px
+    text-transform lowercase
+    font-family "museo", serif
+    font-weight 300
+.contact-top, .engage-top, .newFamBanner
   background-size cover
 .about-top
   background-image url('../images/banner.jpg')
