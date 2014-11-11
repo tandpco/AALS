@@ -142,7 +142,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             div(style="margin-top:20px") {project.content(1).slug(extra).content.money}
     //- What Will The Money Be Used For?
     #projectUpdates.modal.fade(tabindex="-1", role="dialog", aria-labelledby="projectUpdates", aria-hidden="true")
-      .modal-dialog.modal-sm
+      .modal-dialog.modal-sm(style="width:590px")
         .modal-content
           .modal-header
             button.close(type="button", data-dismiss="modal")
@@ -170,5 +170,10 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             src = $(this).attr('src');
         $(this).addClass('hide').parent('p').addClass('img-wrapper').append('<div class="img-bg" style="background-image: url(' + src + ');"></div><h3>' + alt + '</h3>');        
       });
+      $(function(){
+        if(location.search.indexOf('?update')===0) {
+          $("#projectUpdates").modal('show') 
+        }
+      })
       // Script Share element float Box
       var boxShare = $('#shareBox');$(window).scroll(function () { if ($(this).scrollTop() > 1859) {boxShare.removeClass().addClass("fixedPosition"); } else {boxShare.removeClass("fixedPosition").addClass('fixedPositionNo');}});      
