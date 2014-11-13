@@ -1,9 +1,58 @@
-/* rainmakertheme 2014-11-06 */.tk-proxima-nova{font-family:"proxima-nova",sans-serif}
+/* rainmakertheme 2014-11-12 */.tk-proxima-nova{font-family:"proxima-nova",sans-serif}
 .tk-museo{font-family:"museo",serif}
 .tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif}
 .full-width{position:absolute;left:0;right:0;height:460px;overflow:hidden}
 .full-width img{width:100%}
 .bump{display:block;height:460px;width:100%}
+#share{font-family:proxima-nova,sans-serif;}
+#share h3{font-family:proxima-nova,sans-serif;font-size:20px;text-transform:initial;color:#767676;letter-spacing:initial;margin-top:60px}
+#share p{color:#9a9a9a;margin-bottom:20px;font-size:16px;letter-spacing:.05em;font-weight:300}
+#share form{background:#f7fafa;padding:45px;margin-bottom:100px;margin-top:80px;}
+#share form small{margin-top:5px;opacity:.75;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";filter:alpha(opacity=75);display:block}
+#share form label{text-transform:uppercase;color:#a6a6a6;letter-spacing:.075em;font-weight:bold;font-size:12px}
+#share form .form-group{margin-bottom:25px}
+#share form #message{margin-top:20px;margin-bottom:0}
+#share form input.form-control{height:40px}
+#share form .message{-webkit-border-radius:4px;border-radius:4px;background:#fff;border:1px solid #ccc;padding:15px 20px}
+#share form button{background:#35d6f0;-webkit-border-radius:0;border-radius:0;border:0;margin:40px 0 -30px;text-transform:uppercase;font-size:16px;font-weight:bold;padding:10px 25px;letter-spacing:.075em;}
+#share form button:hover,#share form button:focus,#share form button:active{background:#11cae8}
+#share form .form-control[readonly]{background:#fff;cursor:initial;outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+#share form .form-control[readonly]:hover,#share form .form-control[readonly]:focus,#share form .form-control[readonly]:active{outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+#families{background-image:url("../images/banner-families.png");-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:center;margin-bottom:0;}
+#families .donate-section{padding:14% 0% 10% 0%}
+#families h1{font-family:"proxima-nova",sans-serif;font-size:60px;font-weight:bold}
+#families p{font-size:30px}
+.subscribe-bar{background:#f7fafa;color:#a6a6a6;padding:25px 0;}
+.subscribe-bar p{font-size:16px;font-family:"proxima-nova",sans-serif;font-weight:300;letter-spacing:.075em}
+.subscribe-bar input{border:1px solid #e1e1e1;-webkit-border-radius:3px;border-radius:3px;padding:15px 25px;font-size:12px;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:0;width:100%}
+.subscribe-bar button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:#35d6f0;border:0;height:49px;padding:13px;-webkit-border-radius:2px;border-radius:2px;letter-spacing:.09em;font-size:16px;font-weight:600;width:100%;}
+.subscribe-bar button:hover,.subscribe-bar button:focus,.subscribe-bar button:active{background:#1ad0ee}
+h4.sub{text-transform:uppercase;font-weight:bold;color:#d2d1d1;font-size:16px;font-family:"proxima-nova",sans-serif;margin:60px 0 0}
+ul.families{font-family:"proxima-nova",sans-serif;padding:0;margin-bottom:100px;}
+ul.families li.family{padding:30px;margin:0 -30px;}
+ul.families li.family img{max-width:100%}
+ul.families li.family:nth-of-type(even){background:#f7fafa}
+ul.families li.family .col-md-5 .thumbnail{border:0;padding:0;}
+@media (min-width: 769px){ul.families li.family .col-md-5 .thumbnail{margin:0}
+}@media (max-width: 768px){ul.families li.family .col-md-5 .thumbnail{margin-bottom:20px}
+}ul.families li.family .col-md-7 .content h1{font-size:20px;font-weight:bold;color:#767676;letter-spacing:.075em;}
+ul.families li.family .col-md-7 .content h1:first-of-type{margin-top:0}
+ul.families li.family .col-md-7 .content p{font-size:14px;color:#9a9a9a;letter-spacing:.05em;line-height:18px;}
+ul.families li.family .col-md-7 .content p:last-of-type{margin-bottom:40px}
+ul.families li.family .col-md-7 .content .progress{-webkit-border-radius:0;border-radius:0;-webkit-box-shadow:none;box-shadow:none;height:8px;}
+ul.families li.family .col-md-7 .content .progress .progress-bar{background:#35d6f0}
+ul.families li.family .col-md-7 .content .info .data{float:left;margin-right:30px;}
+ul.families li.family .col-md-7 .content .info .data:last-of-type{margin-right:0}
+ul.families li.family .col-md-7 .content .info .data strong{color:#767676;display:block;font-size:20px;margin-bottom:-5px}
+ul.families li.family .col-md-7 .content .info .data small{font-size:14px;color:#9a9a9a}
+ul.families li.family .col-md-7 .content .info .location{padding-left:30px;position:relative;}
+ul.families li.family .col-md-7 .content .info .location:before{content:url("../images/location-icon.png");position:absolute;left:0;top:-2px}
+ul.families li.family .col-md-7 .content .info .location p{font-size:14px;font-weight:bold;color:#9a9a9a;margin-top:30px;margin-bottom:0;text-transform:uppercase}
+div.footing{border-top:1px solid #969696;padding:45px 0 60px;text-align:center;}
+div.footing h2{font-family:proxima-nova,sans-serif;font-size:32px;margin-bottom:15px}
+div.footing p{font-family:museo,sans-serif;font-size:18px;font-weight:300;color:#969696;margin-bottom:36px}
+div.footing a{background:#35d6f0;-webkit-border-radius:2px;border-radius:2px;border:0;color:#fff;font-size:16px;font-weight:bold;text-transform:uppercase;letter-spacing:.15em;padding:15px 40px;}
+div.footing a:hover,div.footing a:focus,div.footing a:active{background:#1ad0ee}
 #startFundraiser .modal-header,#projectUpdates .modal-header,#moneyUsage .modal-header,.special-modal .modal-header,#familyModal .modal-header{border-bottom:0;margin-bottom:-20px;}
 #startFundraiser .modal-header h3.modal-title,#projectUpdates .modal-header h3.modal-title,#moneyUsage .modal-header h3.modal-title,.special-modal .modal-header h3.modal-title,#familyModal .modal-header h3.modal-title{font-size:28px}
 #startFundraiser ul,#projectUpdates ul,#moneyUsage ul,.special-modal ul,#familyModal ul{padding:0;margin:0}

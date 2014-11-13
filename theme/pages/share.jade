@@ -1,0 +1,70 @@
+theme:template(name="default", :load="", title="Share")
+
+  // make sure the campaign can be loaded
+  //- require(:eval="project.id")
+  //- not-found Sorry, the project you're looking for could not be found. 
+  content
+    | <:ssl:on />
+    .jumbotron#families: .container
+      .donate-section.center
+        .donate-caption
+          h1 Know an adoptive family?
+          p.em We’d love to explore how we can help them!
+    .subscribe-bar.clearfix
+      .col-md-6.col-md-offset-3
+        div.top
+          p Get weekly digest of family stories.
+        div.row: form(action='/api/3.0/contacts/', method='POST')
+          input(type='hidden', name='type', value='individual')
+          input(type='hidden', name='--success', value='/families?success')
+          input(type='hidden', name='--failure', value='/families?error')
+          input(type='hidden', name='--namespace', value='register')
+          input(type='hidden', name='--login', value='true')
+          div.col-md-8
+            input(placeholder='Email Address', type='text', name='email')
+          div.col-md-4
+            button(class='btn btn-primary', type='submit') Subscribe
+    .container#share: .col-md-8.col-md-offset-2
+      h3 We’re Eager To Help!
+      p If you know a family currently adopting a child or in the consideration process, we’d love to see if we can help them. The <strong>Adopt A Love Story</strong> community is a vibrant and passionate group of people committed to supporting families in this unique and special journey.
+      p Use the form below to send a message to your friends letting them know about the opportunity to get financial support through <strong>Adopt A Love Story</strong>.
+      form(name='share')
+        .row
+          .col-md-6
+            .form-group
+              label Your Full Name
+              input(class='form-control', name='firstName', id='sender')
+          .col-md-6
+            .form-group
+              label Your Email Address
+              input(class='form-control', name='email')
+        .row
+          .col-md-6
+            .form-group
+              label The Family's Last Name
+              input(class='form-control', name='familyLastName', id='receiver')
+          .col-md-6
+            .form-group
+              label The Family's Best Email
+              input(class='form-control', name='familyEmailAddress')
+        .form-group#message
+          label Message Preview*
+          div(class='message')
+            p Hey <span id="familyName">&lt;insert family's last name&gt;</span> Family,
+
+            p <span id="referralName">&lt;insert referral name&gt;</span> let us know that you might be interested in learning more about Adopt A Love Story and how we might be able to assist you in the adoption process.
+
+            p To learn more about how our organization works visit: www.adoptalovestory.com
+
+            p If you’d like to apply to be on our site feel free to fill out an application here: www.adoptalovestory.com/family-application
+
+            p Someone from our team will follow up with you once your application is submitted and you can feel free to contact us at any time with questions about how we work.
+
+            p We look forward to learning more about your story!
+
+            p Cheers!
+
+            p - AALS Family Services Team
+          small.text-muted *The message above can not be edited before sending.
+        .form-group.clearfix
+          button(class='btn btn-primary pull-right', type='submit') Send

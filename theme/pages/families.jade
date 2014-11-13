@@ -1,0 +1,59 @@
+theme:template(name="default", :load="", title="Discover")
+
+  // make sure the campaign can be loaded
+  //- require(:eval="project.id")
+  //- not-found Sorry, the project you're looking for could not be found. 
+  content
+    | <:ssl:on />
+    .jumbotron#families: .container
+      .donate-section.center
+        .donate-caption
+          h1 Discover a Story to Join
+          p.em Share in the joy of bringing a family together!
+    .subscribe-bar.clearfix
+      .col-md-6.col-md-offset-3
+        div.top
+          p Get weekly digest of family stories.
+        div.row: form(action='/api/3.0/contacts/', method='POST')
+          input(type='hidden', name='type', value='individual')
+          input(type='hidden', name='--success', value='/families?success')
+          input(type='hidden', name='--failure', value='/families?error')
+          input(type='hidden', name='--namespace', value='register')
+          input(type='hidden', name='--login', value='true')
+          div.col-md-8
+            input(placeholder='Email Address', type='text', name='email')
+          div.col-md-4
+            button(class='btn btn-primary', type='submit') Subscribe
+    .container: .col-md-8.col-md-offset-2
+      h4.sub Most Recent
+      ul.families
+        li(class="family", :load=":api(3.0).projects() as family", :iterate="self"): div.row
+          div.col-md-5
+            div.thumbnail
+              <img src="{family.photoUrl}" />
+          div.col-md-7
+            div.content
+              h1 {family.name}
+              p {family.description|limit_words(50)}
+              div.progress
+                div(class='progress-bar', style='width: {family.progress.percent}')
+              div.info
+                div.clearfix
+                  .data
+                    strong {family.progress.percent}
+                    small Funded
+                  .data
+                    strong ${family.progress.money}
+                    small Pledged
+                  .data
+                    strong {family.members.length}
+                    small Givers
+                  .data
+                    strong {family.posts.length|lpad(2,0)}
+                    small Updates
+                div.location
+                  p {family.location}
+    .footing
+      h2 Know a family in the adoption process?
+      p We’d love to explore if we can help. Share Adopt A Love Story with them.
+      a(class='btn btn-primary', href='/share') Share Now

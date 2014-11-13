@@ -1,0 +1,54 @@
+theme:template(name="default", :load="", title="New Family Application")
+
+  //- make sure the campaign can be loaded
+  //- require(:eval="project.id")
+  //- not-found Sorry, the project you're looking for could not be found. 
+  content
+    | <:ssl:on />
+    .jumbotron#families: .container
+      .donate-section.center
+        .donate-caption
+          h1 Are you in the Adoption Process?
+          p.em We’re eager to learn about your story and explore how we might be able to help.
+    .container#share: .col-md-10.col-md-offset-1
+      h3 We’d love to learn more about you.
+      p If you’re a family currently adopting a child or in the consideration process, we’d love to see if we can help. The <strong>Adopt A Love Story</strong> community is a vibrant and passionate group of people committed to supporting families in this unique and special journey.
+      p Use the form below to share a little bit more about you and your story.
+      
+      form(name='apply', action='https://docs.google.com/forms/d/1VgyJTvOyCzM6PoceFCUfkzh8qpFxqzxUk7EgiaWtZME/formResponse', method='POST')
+        div#error
+        .row
+          .col-md-6
+            .form-group
+              label Last Name
+              input(class='form-control', name='lastName')
+          .col-md-6
+            .form-group
+              label First Name
+              input(class='form-control', name='firstName')
+        .row
+          .col-md-6
+            .form-group
+              label Stage in the Adoption Process
+              input(class='form-control', name='adoptionStage')
+          .col-md-6
+            .form-group
+              label Current Family Size
+              input(class='form-control', name='familySize')
+        .row
+          .col-md-6
+            .form-group
+              label State of Residence*
+              input(class='form-control', name='state')
+          .col-md-6
+            .form-group
+              label Are you Adopting Domestic or International?
+              input(class='form-control', name='adoptionCountry')
+        .form-group
+          label What has compelled your family to adopt?
+          textarea(class='form-control', rows='6', name='adoptionInspiration')
+        .form-group
+          label Have you already begun fundraising for your adoption? If so please describe your efforts.
+          textarea(class='form-control', rows='6', name='previousFundraising')
+        .form-group.clearfix
+          button(class='btn btn-primary pull-right', type='submit') Send
