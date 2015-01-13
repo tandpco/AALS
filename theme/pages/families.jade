@@ -1,6 +1,5 @@
 theme:template(name="default", :load="", title="Discover")
-
-  // make sure the campaign can be loaded
+  //- make sure the campaign can be loaded
   //- require(:eval="project.id")
   //- not-found Sorry, the project you're looking for could not be found. 
   content
@@ -16,25 +15,29 @@ theme:template(name="default", :load="", title="Discover")
           p Get weekly digest of family stories.
         div.row: form(action='/api/3.0/contacts/', method='POST')
           input(type='hidden', name='type', value='individual')
-          input(type='hidden', name='--success', value='/families?success')
-          input(type='hidden', name='--failure', value='/families?error')
+          input(type='hidden', name='--success', value='/families?success=true')
+          input(type='hidden', name='--failure', value='/families?success=false')
           input(type='hidden', name='--namespace', value='register')
           input(type='hidden', name='--login', value='true')
+          //@IF :get.success === 'true'
+          .col-md-12: h3(style='margin: 10px 0;') You have been subscribed.
+          //@ELSE
           div.col-md-8
             input(placeholder='Email Address', type='text', name='email')
           div.col-md-4
             button(class='btn btn-primary', type='submit') Subscribe
+          //@ENDIF
     .container: .col-md-8.col-md-offset-2
       h4.sub Most Recent
       ul.families
-        li(class="family", :load=":api(3.0).projects() as family", :iterate="self"): div.row
+        li(class="family", :load=":api(3.0).projects().status(active) as family", :iterate="self"): div.row
           div.col-md-5
-            div.thumbnail
+            div.thumbnail: a(href="/family/{family.slug}", title="{family.name}")
               <img src="{family.photoUrl}" />
           div.col-md-7
             div.content
-              h1 {family.name}
-              p {family.description|limit_words(50)}
+              h1: a(href="/family/{family.slug}", title="{family.name}") {family.name}
+              p {family.description|limit_words(28)}
               div.progress
                 div(class='progress-bar', style='width: {family.progress.percent}')
               div.info

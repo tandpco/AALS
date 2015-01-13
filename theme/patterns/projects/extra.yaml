@@ -1,5 +1,9 @@
 pattern:
   -
+    key: meet
+    format: upload
+    name: Meet The Family Photo
+  -
     key: family
     format: blocks
     name: Family Members

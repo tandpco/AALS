@@ -1,6 +1,13 @@
-theme:template(name="default", :load=":api(3.0).projects(246) as project", title="The Wright Family")
-
-  // make sure the campaign can be loaded
+theme:template(name="default", :load=":api(3.0).projects({:url.2}) as project", title="{project.name}")
+  require-init(:eval=":url.2|cleanslug")
+  not-found Oops. The url for this page wasn"t structured properly.
+  require(:eval="project.id")
+  not-found
+    h3
+      | The project you are accessing could not be found. Please verify the url you used is valid.
+    p
+      code {req.link}
+  //- make sure the campaign can be loaded
   require(:eval="project.id")
   not-found Sorry, the project you're looking for could not be found. 
   content
@@ -52,7 +59,8 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
             i.fa.fa-plus &nbsp;
             | Start a fundraiser
     //- Video section
-    a.section.video.section-height(data-toggle="modal",data-target="#videoModal")
+    //- {project.photos.tags(video-preview)|dump}
+    a.section.video.section-height(data-toggle="modal",data-target="#videoModal", style='background-image: url("{project.photos.tags(file:video-preview).first.photo-url}")')
        //- <div class="embed-responsive embed-responsive-16by9 section-height">
        //-    <iframe class="embed-responsive-item" src=""></iframe>
        //-  </div> 
@@ -76,7 +84,8 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
       .family-caption.container
         aside.col-md-3.pull-right.center(style="background-color: rgba(255,255,255,1);padding-bottom:20px")
           h5 Meet the family:
-          img.round-image.img-responsive(src="{project.photos.first.version(300,300)}", alt="Family", data-toggle="modal", data-target="#familyModal")
+          img.round-image.img-responsive(src="{project.content(1).slug(extra).relationships(meet,attachments).first.version(300,300)}", alt="Family", data-toggle="modal", data-target="#familyModal")
+          //- p {project.content(1).slug(extra).content.meet}
           div#shareBox
             h5 Give to the story:
             a(href="#/my/donate?project={project.id}").btn.btn-lg.btn-blue(role="button") Give now          

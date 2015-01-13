@@ -1,4 +1,4 @@
-/* rainmakertheme 2014-11-12 */.tk-proxima-nova{font-family:"proxima-nova",sans-serif}
+/* rainmakertheme 2014-11-14 */.tk-proxima-nova{font-family:"proxima-nova",sans-serif}
 .tk-museo{font-family:"museo",serif}
 .tk-brandon-grotesque{font-family:"brandon-grotesque",sans-serif}
 .full-width{position:absolute;left:0;right:0;height:460px;overflow:hidden}
@@ -35,19 +35,19 @@ ul.families li.family:nth-of-type(even){background:#f7fafa}
 ul.families li.family .col-md-5 .thumbnail{border:0;padding:0;}
 @media (min-width: 769px){ul.families li.family .col-md-5 .thumbnail{margin:0}
 }@media (max-width: 768px){ul.families li.family .col-md-5 .thumbnail{margin-bottom:20px}
-}ul.families li.family .col-md-7 .content h1{font-size:20px;font-weight:bold;color:#767676;letter-spacing:.075em;}
-ul.families li.family .col-md-7 .content h1:first-of-type{margin-top:0}
+}ul.families li.family .col-md-7 .content h1,ul.families li.family .col-md-7 .content h1 a{font-size:20px;font-weight:bold;color:#767676;letter-spacing:.075em;}
+ul.families li.family .col-md-7 .content h1:first-of-type,ul.families li.family .col-md-7 .content h1 a:first-of-type{margin-top:0}
 ul.families li.family .col-md-7 .content p{font-size:14px;color:#9a9a9a;letter-spacing:.05em;line-height:18px;}
-ul.families li.family .col-md-7 .content p:last-of-type{margin-bottom:40px}
+ul.families li.family .col-md-7 .content p:last-of-type{margin-bottom:20px}
 ul.families li.family .col-md-7 .content .progress{-webkit-border-radius:0;border-radius:0;-webkit-box-shadow:none;box-shadow:none;height:8px;}
-ul.families li.family .col-md-7 .content .progress .progress-bar{background:#35d6f0}
+ul.families li.family .col-md-7 .content .progress .progress-bar{background:#35d6f0;min-width:1%}
 ul.families li.family .col-md-7 .content .info .data{float:left;margin-right:30px;}
 ul.families li.family .col-md-7 .content .info .data:last-of-type{margin-right:0}
 ul.families li.family .col-md-7 .content .info .data strong{color:#767676;display:block;font-size:20px;margin-bottom:-5px}
 ul.families li.family .col-md-7 .content .info .data small{font-size:14px;color:#9a9a9a}
 ul.families li.family .col-md-7 .content .info .location{padding-left:30px;position:relative;}
 ul.families li.family .col-md-7 .content .info .location:before{content:url("../images/location-icon.png");position:absolute;left:0;top:-2px}
-ul.families li.family .col-md-7 .content .info .location p{font-size:14px;font-weight:bold;color:#9a9a9a;margin-top:30px;margin-bottom:0;text-transform:uppercase}
+ul.families li.family .col-md-7 .content .info .location p{font-size:14px;font-weight:bold;color:#9a9a9a;margin-top:20px;margin-bottom:0;text-transform:uppercase}
 div.footing{border-top:1px solid #969696;padding:45px 0 60px;text-align:center;}
 div.footing h2{font-family:proxima-nova,sans-serif;font-size:32px;margin-bottom:15px}
 div.footing p{font-family:museo,sans-serif;font-size:18px;font-weight:300;color:#969696;margin-bottom:36px}
@@ -81,7 +81,7 @@ h3[data-toggle='modal']:hover{color:#35d6f0}
 .engage-top .caption h3{font-size:30px;font-weight:300}
 .section.video{-webkit-transition-duration:.25s;-moz-transition-duration:.25s;-o-transition-duration:.25s;-ms-transition-duration:.25s;transition-duration:.25s;}
 .section.video:hover{opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80);cursor:pointer}
-.newFamBanner{background-image:url("../images/newFamily.png");background-position:center center;background-repeat:no-repeat;margin-bottom:60px;padding:250px 15px;text-align:center;}
+.newFamBanner{background-image:url("../images/coming-soon.jpg");background-position:center center;background-repeat:no-repeat;margin-bottom:60px;padding:250px 15px;text-align:center;}
 @media (min-width: 1920px){.newFamBanner{background-position:center -100px}
 }.newFamBanner h2{font-size:45px}
 .newFamBanner em{font-size:30px;text-transform:lowercase;font-family:"museo",serif;font-weight:300}

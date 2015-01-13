@@ -16,6 +16,7 @@ theme:template(name="default", :load="", title="New Family Application")
       p Use the form below to share a little bit more about you and your story.
       
       form(name='apply', action='https://docs.google.com/forms/d/1VgyJTvOyCzM6PoceFCUfkzh8qpFxqzxUk7EgiaWtZME/formResponse', method='POST')
+        | <input type="hidden" name="--conversations" value="previousFundraising" />
         div#error
         .row
           .col-md-6
@@ -26,6 +27,11 @@ theme:template(name="default", :load="", title="New Family Application")
             .form-group
               label First Name
               input(class='form-control', name='firstName')
+        .row
+          .col-md-12
+            .form-group
+              label Email Address
+              input(class='form-control', name='emailAddress')
         .row
           .col-md-6
             .form-group

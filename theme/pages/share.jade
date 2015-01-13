@@ -16,37 +16,49 @@ theme:template(name="default", :load="", title="Share")
           p Get weekly digest of family stories.
         div.row: form(action='/api/3.0/contacts/', method='POST')
           input(type='hidden', name='type', value='individual')
-          input(type='hidden', name='--success', value='/families?success')
-          input(type='hidden', name='--failure', value='/families?error')
+          input(type='hidden', name='--success', value='/families?success=true')
+          input(type='hidden', name='--failure', value='/families?success=false')
           input(type='hidden', name='--namespace', value='register')
           input(type='hidden', name='--login', value='true')
+          //@IF :get.success === 'true'
+          .col-md-12: h3(style='margin: 10px 0;') You have been subscribed.
+          //@ELSE
           div.col-md-8
             input(placeholder='Email Address', type='text', name='email')
           div.col-md-4
             button(class='btn btn-primary', type='submit') Subscribe
+          //@ENDIF
     .container#share: .col-md-8.col-md-offset-2
       h3 We’re Eager To Help!
       p If you know a family currently adopting a child or in the consideration process, we’d love to see if we can help them. The <strong>Adopt A Love Story</strong> community is a vibrant and passionate group of people committed to supporting families in this unique and special journey.
       p Use the form below to send a message to your friends letting them know about the opportunity to get financial support through <strong>Adopt A Love Story</strong>.
-      form(name='share')
+      form(id='share', action='/api/3.0/messages', method='POST')
+        //@IF :get.sent === 'true'
+        h1 Thanks for sharing!
+        //@ELSE
+        input(type='hidden', name='--success', value='/share?sent=true')
+        input(type='hidden', name='--failure', value='/share?sent=false')
+        input(type='hidden', name='--namespace', value='share')
+        input(type='hidden', name='method', value='email')
+        <:module slug="messages-display" namespace="share" />
         .row
           .col-md-6
             .form-group
               label Your Full Name
-              input(class='form-control', name='firstName', id='sender')
+              input(class='form-control', name='sender[name]', id='sender')
           .col-md-6
             .form-group
               label Your Email Address
-              input(class='form-control', name='email')
+              input(class='form-control', name='sender[email]')
         .row
           .col-md-6
             .form-group
               label The Family's Last Name
-              input(class='form-control', name='familyLastName', id='receiver')
+              input(class='form-control', name='recipient[name]', id='receiver')
           .col-md-6
             .form-group
               label The Family's Best Email
-              input(class='form-control', name='familyEmailAddress')
+              input(class='form-control', name='recipient[email]')
         .form-group#message
           label Message Preview*
           div(class='message')
@@ -66,5 +78,6 @@ theme:template(name="default", :load="", title="Share")
 
             p - AALS Family Services Team
           small.text-muted *The message above can not be edited before sending.
-        .form-group.clearfix
-          button(class='btn btn-primary pull-right', type='submit') Send
+          .form-group.clearfix
+            button(class='btn btn-primary pull-right', type='submit') Send
+        //@ENDIF
