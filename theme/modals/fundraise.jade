@@ -24,7 +24,7 @@
         .center
           div(style="padding:20px 0")
             label Here's your unique link.
-            input(type="text",value="{:e.url.link(/family)}?_m={:member.id}").form-control
+            input(type="text",value="{:e.url.link(/family)}/{project.slug}?_m={:member.id}").form-control
           a.btn.btn-blue-translucent.btn-lg(role="button",rel="twitter-share",data-link="{:e.url.link(/family)}?_m={:member.id}")
             i.fa.fa-twitter.white &nbsp;
             | Tweet
