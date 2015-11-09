@@ -6,7 +6,7 @@ theme:template(name="default", :load=":api(3.0).projects(246) as project", title
 
   content(:load=":api(3.0).content(site.home) as home")
     // Begin Main Slider
-    .row: .col-md-12.engage-top(style="background-image:url({home.relationships(image,attachments).first.version});height:auto;padding-bottom:100px")
+    .row: .col-md-12.engage-top(style="background-image:url({home.relationships(image,attachments).first.version});height:auto;padding-bottom:100px;float:none;padding-top:200px;")
       .container
         .caption.center
           h2(style="font-size:32px;font-weight:bold").banner-caption {home.content.header}

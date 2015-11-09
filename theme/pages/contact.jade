@@ -52,11 +52,12 @@ theme:template(name="default", title="Get In Touch")
       .form.col-md-8.col-md-offset-2
         .container-fluid
           form(action="/api/3.0/form-completions",role="form",id="form", style="padding: 2.0em;", method="post")
-            | <:module slug="messages-display" namespace="signup-form" />
-            | <input type="hidden" name="--namespace" value="signup-form" />
+            | <:module slug="messages-display" namespace="contact-form" />
+            | <input type="hidden" name="--namespace" value="contact-form" />
             | <input type="hidden" name="--failure" value="/contact#form" />
             | <input type="hidden" name="--form" value="contact-form" />
             | <input type="hidden" name="--success" value="/contact?success=true" />
+            | <input type="hidden" name="--conversation" value="message" />
 
             .form-group
               input#input-name.form-control.contact-form(type="text",  name="name", placeholder="Your Name:")
